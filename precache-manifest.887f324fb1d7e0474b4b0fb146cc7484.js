@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "2c4749402afa263d8f986fc60af20ab7",
+    "revision": "de6dc5bdbb1a26442f8061ab9c7403d0",
     "url": "/n-borei/index.html"
   },
   {
-    "revision": "6e02c613511f8743e621",
+    "revision": "d74b0d6cff476ebf8037",
     "url": "/n-borei/static/css/2.69121389.chunk.css"
   },
   {
-    "revision": "b8507afb320b65afbfb9",
-    "url": "/n-borei/static/css/main.b0846642.chunk.css"
+    "revision": "09813c4c67c46fe11408",
+    "url": "/n-borei/static/css/main.24246af5.chunk.css"
   },
   {
-    "revision": "6e02c613511f8743e621",
-    "url": "/n-borei/static/js/2.654c9fb7.chunk.js"
+    "revision": "d74b0d6cff476ebf8037",
+    "url": "/n-borei/static/js/2.b967d60d.chunk.js"
   },
   {
     "revision": "3453b8997016469371284a28c0e873e2",
-    "url": "/n-borei/static/js/2.654c9fb7.chunk.js.LICENSE.txt"
+    "url": "/n-borei/static/js/2.b967d60d.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "b8507afb320b65afbfb9",
-    "url": "/n-borei/static/js/main.0b996e98.chunk.js"
+    "revision": "09813c4c67c46fe11408",
+    "url": "/n-borei/static/js/main.6b467f6a.chunk.js"
   },
   {
     "revision": "2eab1424cec6f55465ea",
@@ -208,16 +208,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/n-borei/static/media/bags_title.8000b2df.png"
   },
   {
-    "revision": "e9bc2ca0a76786306d7d3345d2a38e27",
-    "url": "/n-borei/static/media/bracelets_title.e9bc2ca0.png"
+    "revision": "58649a16e7a6533bf48a0baec5063f14",
+    "url": "/n-borei/static/media/bracelets_title.58649a16.png"
   },
   {
-    "revision": "1dc8870080f7b6c4086c3a9f8028e5d9",
-    "url": "/n-borei/static/media/brooch_title.1dc88700.png"
+    "revision": "2e46f8bcf61221f6d0cd2226e90b2222",
+    "url": "/n-borei/static/media/brooch_title.2e46f8bc.png"
   },
   {
-    "revision": "8cfca7baf7fde5bbafe930beae485951",
-    "url": "/n-borei/static/media/lavBrooch_title.8cfca7ba.png"
+    "revision": "55af9bc0e2048f24c7030c5ce7246648",
+    "url": "/n-borei/static/media/lavBrooch_title.55af9bc0.png"
   },
   {
     "revision": "91368ec0594d2bc1d0335b772014ab9f",

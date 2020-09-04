@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/n-borei/static/css/main.b0846642.chunk.css",
-    "main.js": "/n-borei/static/js/main.0b996e98.chunk.js",
-    "main.js.map": "/n-borei/static/js/main.0b996e98.chunk.js.map",
+    "main.css": "/n-borei/static/css/main.24246af5.chunk.css",
+    "main.js": "/n-borei/static/js/main.6b467f6a.chunk.js",
+    "main.js.map": "/n-borei/static/js/main.6b467f6a.chunk.js.map",
     "runtime-main.js": "/n-borei/static/js/runtime-main.a1cd830e.js",
     "runtime-main.js.map": "/n-borei/static/js/runtime-main.a1cd830e.js.map",
     "static/css/2.69121389.chunk.css": "/n-borei/static/css/2.69121389.chunk.css",
-    "static/js/2.654c9fb7.chunk.js": "/n-borei/static/js/2.654c9fb7.chunk.js",
-    "static/js/2.654c9fb7.chunk.js.map": "/n-borei/static/js/2.654c9fb7.chunk.js.map",
+    "static/js/2.b967d60d.chunk.js": "/n-borei/static/js/2.b967d60d.chunk.js",
+    "static/js/2.b967d60d.chunk.js.map": "/n-borei/static/js/2.b967d60d.chunk.js.map",
     "index.html": "/n-borei/index.html",
-    "precache-manifest.b08def5203df9481f793759bd88ed6ab.js": "/n-borei/precache-manifest.b08def5203df9481f793759bd88ed6ab.js",
+    "precache-manifest.887f324fb1d7e0474b4b0fb146cc7484.js": "/n-borei/precache-manifest.887f324fb1d7e0474b4b0fb146cc7484.js",
     "service-worker.js": "/n-borei/service-worker.js",
     "static/css/2.69121389.chunk.css.map": "/n-borei/static/css/2.69121389.chunk.css.map",
-    "static/css/main.b0846642.chunk.css.map": "/n-borei/static/css/main.b0846642.chunk.css.map",
-    "static/js/2.654c9fb7.chunk.js.LICENSE.txt": "/n-borei/static/js/2.654c9fb7.chunk.js.LICENSE.txt",
+    "static/css/main.24246af5.chunk.css.map": "/n-borei/static/css/main.24246af5.chunk.css.map",
+    "static/js/2.b967d60d.chunk.js.LICENSE.txt": "/n-borei/static/js/2.b967d60d.chunk.js.LICENSE.txt",
     "static/media/AtlassBeatle__1.jpg": "/n-borei/static/media/AtlassBeatle__1.66b266bd.jpg",
     "static/media/AtlassBeatle__2.jpg": "/n-borei/static/media/AtlassBeatle__2.a91b84cf.jpg",
     "static/media/BeetleParadi__1.jpg": "/n-borei/static/media/BeetleParadi__1.0aa4d600.jpg",
@@ -50,9 +50,9 @@
     "static/media/autor.jpg": "/n-borei/static/media/autor.64d1459b.jpg",
     "static/media/back.svg": "/n-borei/static/media/back.ce40d1ad.svg",
     "static/media/bags_title.png": "/n-borei/static/media/bags_title.8000b2df.png",
-    "static/media/bracelets_title.png": "/n-borei/static/media/bracelets_title.e9bc2ca0.png",
-    "static/media/brooch_title.png": "/n-borei/static/media/brooch_title.1dc88700.png",
-    "static/media/lavBrooch_title.png": "/n-borei/static/media/lavBrooch_title.8cfca7ba.png",
+    "static/media/bracelets_title.png": "/n-borei/static/media/bracelets_title.58649a16.png",
+    "static/media/brooch_title.png": "/n-borei/static/media/brooch_title.2e46f8bc.png",
+    "static/media/lavBrooch_title.png": "/n-borei/static/media/lavBrooch_title.55af9bc0.png",
     "static/media/lavalierMolecula__1.jpg": "/n-borei/static/media/lavalierMolecula__1.91368ec0.jpg",
     "static/media/lavalierMolecula__2.jpg": "/n-borei/static/media/lavalierMolecula__2.a904a935.jpg",
     "static/media/materials.jpg": "/n-borei/static/media/materials.238e276e.jpg",
@@ -64,8 +64,8 @@
   "entrypoints": [
     "static/js/runtime-main.a1cd830e.js",
     "static/css/2.69121389.chunk.css",
-    "static/js/2.654c9fb7.chunk.js",
-    "static/css/main.b0846642.chunk.css",
-    "static/js/main.0b996e98.chunk.js"
+    "static/js/2.b967d60d.chunk.js",
+    "static/css/main.24246af5.chunk.css",
+    "static/js/main.6b467f6a.chunk.js"
   ]
 }
