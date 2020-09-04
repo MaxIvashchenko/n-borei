@@ -1,0 +1,114 @@
+.ShowItem {
+    padding: 20px 10px;
+    margin-top: 10px;
+
+    .backImg {
+        padding: 0;
+        width: 40px;
+        height: 40px;
+        img {
+            width: 25px;
+        }
+    }
+
+    .textBlock {
+        padding: 10px 20px;
+        margin-top: 20px;
+
+        font: 22px $basicFont;
+
+        h2 {
+            margin: 0;
+            line-height: 25px;
+        }
+        .id {
+            font-size: 18px;
+        }
+        .line {
+            border-top: 1px dotted #d7d6d6;
+            margin: 20px 0;
+        }
+
+        .priceBlock {
+            padding-right: 15%;
+            display: flex;
+            justify-content: space-between;
+        }
+        .sold {
+            color: rgb(155, 49, 49);
+        }
+
+        .available {
+            color: rgb(30, 78, 30);
+        }
+        h4,
+        .priceBlock {
+            font-family: "Alegreya Sans";
+            // text-transform: uppercase;
+        }
+
+        .variants {
+            display: flex;
+            button {
+                float: none;
+                height: 40px;
+                width: 40px;
+                margin-right: 5px;
+                margin-top: 0px;
+                border: none;
+            }
+        }
+    }
+
+    .imageBlock {
+        margin-top: 20px;
+        padding-top: 10px;
+        // background-color: rgb(255, 251, 231);
+        text-align: center;
+        // border: 1px solid black;
+        border-radius: 10px;
+        img {
+            width: 90%;
+        }
+        .imageRow {
+            display: flex;
+            overflow-y: scroll;
+
+            margin: 30px auto 10px;
+
+            button {
+                background: none;
+                border: none;
+                img {
+                    margin-left: -5px;
+                    width: 100px;
+                    margin: 5px 5px 15px;
+                    padding: 10px;
+                    transition-duration: 0.4s;
+                }
+                .activeImg {
+                    padding: 0px;
+                    transition-duration: 0.4s;
+                    box-shadow: 5px 5px 16px -13px rgba(0, 0, 0, 0.76);
+                }
+            }
+            button:focus {
+                outline: none;
+            }
+        }
+
+        .imageRow::-webkit-scrollbar {
+            -webkit-appearance: none;
+        }
+
+        .imageRow::-webkit-scrollbar:horizontal {
+            height: 10px;
+        }
+
+        .imageRow::-webkit-scrollbar-thumb {
+            border-radius: 8px;
+            border: 2px solid white;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+    }
+}

@@ -1,0 +1,197 @@
+.Home {
+    .container {
+        padding: 0;
+    }
+
+    .categoryShop {
+        button {
+            outline: none;
+            border: none;
+            background: none;
+            div {
+                background: #fffadf;
+                transition: all 1s ease-out;
+                z-index: 1;
+                
+            }
+            div:hover {
+                box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.1);
+                // transform: scale(1.05);
+                z-index: 20;
+            }
+        }
+        h3 {
+            font-family: $basicFont;
+            font-size: 40px;
+            color: rgb(80, 51, 13);
+            // width: 100%;
+            // height: 100%;
+        }
+
+        > div {
+            background: #fff;
+            padding: 0;
+        }
+
+        .brooch {
+            height: 300px;
+            margin: 10px 5px;
+            z-index: 1;
+
+            img {
+                position: absolute;
+                top: -40px;
+                left: 0;
+                width: 60%;
+                transition: all 0.5s ease-out;
+            }
+            h3 {
+                position: absolute;
+                top: 40%;
+                right: 10%;
+                transition: all 0.5s ease-out;
+            }
+        }
+        .brooch:hover {
+            img {
+                z-index: 20;
+                transform: rotate(45deg) scale(1.2);
+            }
+            h3 {
+                font-size: 50px;
+            }
+        }
+
+        .bracelets {
+            height: 300px;
+            position: relative;
+            z-index: 1;
+            margin: 10px 5px;
+            overflow: hidden;
+            img {
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 70%;
+                transition: all 0.5s ease-out;
+            }
+            h3 {
+                position: absolute;
+                left: 10px;
+                top: 20%;
+                transition: all 0.5s ease-out;
+            }
+        }
+        .bracelets:hover {
+            overflow: visible;
+            z-index: 20;
+            img {
+                z-index: 20;
+                transform: rotate(-45deg) scale(1.2);
+            }
+            h3 {
+                top: 40%;
+            }
+        }
+
+        .rings {
+            position: relative;
+            height: 300px;
+            margin: 10px 5px;
+            z-index: 1;
+
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 230px;
+                transition: all 0.5s ease-out;
+            }
+            h3 {
+                position: absolute;
+                bottom: 10px;
+                left: 30%;
+                transition: all 0.5s ease-out;
+            }
+        }
+        .rings:hover {
+            img {
+                z-index: 20;
+                transform: rotate(45deg) scale(1.2);
+            }
+            h3 {
+                font-size: 50px;
+                left: 25%;
+
+                bottom: 15px;
+            }
+        }
+
+        .bags {
+            position: relative;
+            height: 300px;
+            margin: 10px 5px;
+            z-index: 1;
+
+            img {
+                position: absolute;
+                bottom: 0;
+                left: 30px;
+                width: 70%;
+                transition: all 0.5s ease-out;
+            }
+            h3 {
+                position: absolute;
+                top: 10px;
+                left: 30%;
+                transition: all 0.5s ease-out;
+            }
+        }
+        .bags:hover {
+            img {
+                bottom: 20px;
+                z-index: 20;
+                transform: scale(1.2);
+            }
+            h3 {
+                font-size: 50px;
+
+                top: 15px;
+            }
+        }
+
+        .lavBrooch {
+            height: 300px;
+            z-index: 1;
+            margin: 10px 5px;
+            overflow: hidden;
+            position: relative;
+
+            img {
+                position: absolute;
+                right: -40px;
+                top: -30px;
+                width: 70%;
+                transition: all 0.5s ease-out;
+            }
+            h3 {
+                position: absolute;
+                left: 5px;
+                top: 45px;
+                transition: all 0.5s ease-out;
+            }
+        }
+        .lavBrooch:hover {
+            img {
+                right: 0;
+                top: 10px;
+                z-index: 20;
+                transform: scale(1.1);
+            }
+            h3 {
+                top: 10px;
+                left: 10px;
+            }
+        }
+    }
+}

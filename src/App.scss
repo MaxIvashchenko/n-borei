@@ -1,0 +1,55 @@
+$gold-green: #b1a671;
+$brown: #7a5940;
+ 
+  
+.variants {
+    padding: 10px;
+    div {
+        float: left;
+        height: 25px;
+        width: 25px;
+        margin-right: 5px;
+        margin-top: 5px;
+
+    }
+
+
+    .base {
+        background: rgb(186, 221, 186);
+    }
+    .blue {
+        background: rgb(141, 180, 238);
+    }
+}
+
+@media only screen and (max-width: 768px) {}
+
+
+$basicFont: "Cormorant Garamond";
+
+$breakpoints: (
+    'medium-landscape':  (orientation : landscape ),
+    'extra-small':  ( max-width:  575px ),
+    'small':  ( max-width:  767px ),
+    'medium': ( max-width:  992px ),
+    'medium-large': ( max-width:  1024px ),
+    'min-large':  ( max-width: 1200px ),
+    'extra-large': ( max-width:  1450px ),
+    'large':  ( min-width: 1200px ),
+
+) !default;
+
+ 
+
+@import "./components/banner/Banner.scss";
+@import "./components/header/Header.scss";
+@import "./components/Home/Home.scss";
+@import "./components/about-author/AboutAuthor.scss";
+@import "./components/contacts/Contacts.scss";
+@import "./components/footer/Footer.scss";
+@import "./components/shop/Shop.scss";
+
+@import "./components/shop/ShowItem/ShowItem.scss";
+
+
+@import "./components/orderAndShipment/OrderAndShipment.scss";

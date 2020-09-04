@@ -1,0 +1,39 @@
+.Order {
+    margin: 10% 70px;
+    border-radius: 10px;
+    background: #cdc28a;
+    opacity: 0.9;
+
+    text-align: center;
+    padding: 30px 0 40px;
+
+    font-size: 20px ;
+    font-family: $gold-green;
+    
+    h2 {
+        text-align: center;
+    }
+    p {
+        padding: 0 40px;
+    }
+    i {
+        font-size: 60px;
+        color: #7a5940;
+        padding: 20px;
+    }
+
+    i:hover {
+        -webkit-transform: scale(1.2);
+        -ms-transform: scale(1.2);
+        transform: scale(1.2);
+    }
+    #tooltip-top > .tooltip-inner {
+        background-color: #7a5940;
+        color: white;
+        border: 1px solid #7a5940;
+        opacity: 0.5;
+    }
+    #tooltip-top > .tooltip-arrow {
+        border-top: 5px solid #7a5940;
+    }
+}

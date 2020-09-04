@@ -1,0 +1,21 @@
+* {
+  margin: 0;
+}
+
+/* body {
+  background-image: linear-gradient(to bottom, white 0%, #ebc99a 100%);
+} */
+
+
+.toTop {
+  padding: 30px;
+  position: fixed;
+  bottom: 14%;
+  /* отступ кнопки от нижнего края страницы*/
+  right: 6%;
+  cursor: pointer;
+  transition: 1.64s;
+  background: url('./images/up_btn.png') no-repeat;
+  background-size: auto 100%;
+  z-index: 5;
+}
