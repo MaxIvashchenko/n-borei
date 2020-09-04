@@ -3,9 +3,6 @@ import autorImg from './autor.jpg'
 import materialsImg from './materials.jpg'
 import { Animated } from 'react-animated-css'
 
-import { BrowserRouter as Router, Switch, NavLink, Route, Link } from "react-router-dom";
-
-
 export default function AboutAuthor({getSelected}) {
     const blocks = {
         autor: {

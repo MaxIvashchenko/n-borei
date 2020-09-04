@@ -5,7 +5,7 @@ export default function FewItems({ numOfImg, setnumOfImg, item }) {
 
     const colors = item.variants.map((variant, i) => {
         return (
-            <button onClick={()=>setactiveItem(i)} key={variant.color + '-' + i} className={variant.color}></button>
+            <button onClick={()=>setactiveItem(i)} key={variant.color + '-' + i} className={activeItem === i ? "activeVariant "+variant.color : variant.color}></button>
         )
     })
 

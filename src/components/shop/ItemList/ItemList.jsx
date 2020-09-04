@@ -1,23 +1,17 @@
 import React from 'react'
 import CardImage from './CardImage';
 import { Animated } from 'react-animated-css'
-
 import { Link } from 'react-router-dom'
 
 
 export default function ItemList({ items }) {
-
-
-
-
-
 
     const itemList = items.map(function (item, i) {
 
         const path = `shop/${item.title}/${item.name}`
         const showItem = () => {
             if (item.variants) {
-                // const priceStart
+
                 const startPrice = item.variants.reduce((a, b) => Math.min(a.price, b.price))
                 const isAvailable = item.variants.some((a, b) => a.available === 'available')
                 const colors = item.variants.map((variant, i) => <div key={variant.color + '-' + i} className={variant.color}></div>)

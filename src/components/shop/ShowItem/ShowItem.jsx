@@ -3,10 +3,12 @@ import { Animated } from 'react-animated-css'
 import { Link } from 'react-router-dom'
 import backImg from '../../../images/back.svg'
 import FewItems from './FewItems'
+import NotFound from '../../common/NotFound'
 
 export default function Item(props) {
-    const item = props.location.state.item
     const [numOfImg, setnumOfImg] = useState(0)
+    if (!props.location.state) return <NotFound />
+    const item = props.location.state.item
 
     return (
         <Animated animationInDuration={1000} animationIn="fadeIn" className="ShowItem">
@@ -70,9 +72,6 @@ export default function Item(props) {
                     </>
                 }
             </div>
-
-
-
         </Animated>
     )
 }

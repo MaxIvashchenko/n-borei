@@ -7,7 +7,7 @@ export const items = [
 		material: "Consists of crystals and pearls Swarovski, Japanese beads, leather binders.",
 		dimensions: "7-8 cm.",
 		price: "180",
-		images: ['items/Lavalierbrooch/LotusKeepSilent/LotusKeepSilent__2.jpg', 'items/Lavalierbrooch/LotusKeepSilent/LotusKeepSilent__1.jpg'],
+		images: ['items/Lavalierbrooch/LotusKeepSilent/LotusKeepSilent__2.jpg', 'items/Lavalierbrooch/LotusKeepSilent/LotusKeepSilent__1.jpg', 'items/Lavalierbrooch/LotusKeepSilent/LotusKeepSilent__3.jpg'],
 		available: "available"
 	},
 	{

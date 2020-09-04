@@ -1,14 +1,25 @@
 import React from 'react'
 import Carousel from 'react-bootstrap/Carousel'
+import ImageLoader from 'react-imageloader';
+function preloader() {
+    return (
+        <div class="d-flex justify-content-center">
+            <div style={{color: '#7a5940'}} class="spinner-border" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+    )
+}
 
 export default function CardImage({ images, name }) {
     const imageMap = images.map((image, i) => {
         return (
             <Carousel.Item key={i} >
-                <img
-                    className="d-block w-100"
+                <ImageLoader
+                    className="d-block w-100 card_img"
                     src={require('../../../images/' + image + '')}
                     alt={name + "-photo-" + i + 1}
+                    preloader={preloader}
                 />
             </Carousel.Item>
 
@@ -17,11 +28,7 @@ export default function CardImage({ images, name }) {
 
     function OneCard() {
         return (
-            <>
-                <div className="border-img">
-                    <img className="card_img" src={require('../../../images/' + images[0] + '')} alt={name + "-photo"} />
-                </div>
-            </>
+            <ImageLoader className="card_img" src={require('../../../images/' + images[0] + '')} alt={name + "-photo"} />
         )
     }
 

@@ -1,5 +1,6 @@
 $gold-green: #b1a671;
 $brown: #7a5940;
+$gold: #b7914c;
  
   
 .variants {
@@ -48,6 +49,7 @@ $breakpoints: (
 @import "./components/contacts/Contacts.scss";
 @import "./components/footer/Footer.scss";
 @import "./components/shop/Shop.scss";
+@import "./components/common/Common.scss";
 
 @import "./components/shop/ShowItem/ShowItem.scss";
 

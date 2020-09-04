@@ -49,6 +49,9 @@ export default function Footer() {
                         <a href={links.facebook}><i className="fab fa-facebook facebook-bg"></i></a>
                         <a href={links.instagram}><i className="fab fa-instagram instagram-bg"></i></a>
                     </div>
+                    <div className="col-12">
+                        <p>Natali Borei © 2015 - 2020</p>
+                    </div>
                 </div>
             </section>
         </footer>

@@ -1,12 +1,8 @@
 import React from 'react'
-
-
 import Toolbar from './Toolbar/Toolbar';
 import ItemList from './ItemList/ItemList';
 import FilterSettings from './Toolbar/FilterSettings';
 import { Animated } from 'react-animated-css'
-
-import { BrowserRouter as Router, Switch, NavLink, Route, Link } from "react-router-dom";
 
 export default class Shop extends React.Component {
 
