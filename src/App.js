@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState,Suspense } from 'react';
 import './App.scss';
 import Header from './components/Header/Header';
 import Home from './components/Home/Home';
@@ -17,6 +17,7 @@ import NotFound from './components/common/NotFound'
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 
+
 function App() {
   const filters = ["Lavalier brooch", "Brooch", "Rings", "Bracelets", "Bags"]
 
@@ -28,6 +29,7 @@ function App() {
     <Router
     // basename="/n-borei"
     >
+      <Suspense fallback="loading">
         <Header mainPage={mainPage} />
         <Switch>
 
@@ -56,6 +58,7 @@ function App() {
         <ScrollToTop />
 
         <Footer mainPage={mainPage} />
+      </Suspense>
     </Router>
   );
 }

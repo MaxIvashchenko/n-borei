@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom'
 
 
 export default function ItemList({ items }) {
-
     const itemList = items.map(function (item, i) {
 
         const path = `shop/${item.title}/${item.name}`

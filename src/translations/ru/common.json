@@ -1,0 +1,21 @@
+{
+    "header": {
+        "home": "На главную",
+        "about" : "Об авторе",
+        "shop" : "Магазин",
+        "orderShip" : "Заказ и доставка",
+        "contacts" : "Контакты"
+    },
+    "categories": {
+        "brooch": "Брошки",
+        "bracelets": "Браслеты",
+        "rings": "Кольца",
+        "bags": "Сумки",
+        "lavBrooch": "Подвески"
+    },
+    "footer": {
+        "contactUs": "Связаться с нами",
+        "adress": "Харьков, Украина",
+        "usefulLinks": "Навигация"
+    }
+}

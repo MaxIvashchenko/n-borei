@@ -1,8 +1,10 @@
 import React from 'react'
+import { useTranslation } from "react-i18next";
 import shortLogo from '../../images/shortLogo.png'
 import { Link } from "react-router-dom";
 
-export default function Footer({mainPage}) {
+export default function Footer({ mainPage }) {
+    const { t } = useTranslation('common');
     const links = {
         facebook: "https://www.facebook.com/Nataly.la.perla/",
         instagram: "https://www.instagram.com/accounts/login/?next=%2Fbeads__line%2F&source=follow",
@@ -13,11 +15,11 @@ export default function Footer({mainPage}) {
             <div className="container">
                 <div className="row">
                     <div className="col-12 col-md-4 footerContacts">
-                        <h3>Contact us</h3>
+                        <h3>{t('footer.contactUs')}</h3>
                         <ul>
                             <li>
                                 <i className="fas fa-map-marker-alt"></i>
-                                <p>Kharkov, Ukraine</p>
+                                <p>{t('footer.adress')}</p>
                             </li>
                             <li>
                                 <i className="fas fa-phone"></i>
@@ -33,12 +35,12 @@ export default function Footer({mainPage}) {
                         <img src={shortLogo} alt="small-logo" />
                     </div>
                     <div className="col-12 col-md-4 footerNavigation">
-                        <h3>Useful links</h3>
-                        <Link to={mainPage}>Home</Link>
-                        <Link to='/about'>About</Link>
-                        <Link to='/shop'>Shop</Link>
-                        <Link to='/order'>Order & Shipping</Link>
-                        <Link to='/contacts'>Contacts</Link>
+                        <h3>{t('footer.usefulLinks')}</h3>
+                        <Link to={mainPage}>{t('header.home')}</Link>
+                        <Link to='/about'>{t('header.about')}</Link>
+                        <Link to='/shop'>{t('header.shop')}</Link>
+                        <Link to='/order'>{t('header.orderShip')}</Link>
+                        <Link to='/contacts'>{t('header.contacts')}</Link>
                     </div>
                 </div>
             </div>

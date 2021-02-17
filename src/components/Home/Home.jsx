@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import Banner from '../banner/Banner';
 import { Animated } from 'react-animated-css'
 import bracelet from '../../images/main/bracelets_title.png'
@@ -8,7 +9,10 @@ import brooch from '../../images/main/brooch_title.png'
 import lavBrooch from '../../images/main/lavBrooch_title.png'
 import ring from '../../images/main/rings_title.png'
 
+
+
 function Home({ getSelected }) {
+    const [t] = useTranslation('common');
 
     const categories = [
         { name: 'brooch', sizeClass: 'col-md-7', imgSrc: brooch, text: 'Brooch' },
@@ -31,7 +35,7 @@ function Home({ getSelected }) {
                                     <div className={category.name}>
 
                                         <img src={category.imgSrc} alt={category.name + '_title'} />
-                                        <h3>{category.text}</h3>
+                                        <h3>{t(`categories.${category.name}`)}</h3>
 
                                     </div>
                                 </Link>

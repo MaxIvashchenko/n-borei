@@ -1,0 +1,21 @@
+{
+    "header": {
+        "home": "Home",
+        "about" : "About",
+        "shop" : "Shop",
+        "orderShip" : "Order & Shipping",
+        "contacts" : "Contacts"
+    },
+    "categories": {
+        "brooch": "Brooch",
+        "bracelets": "Bracelets",
+        "rings": "Rings",
+        "bags": "Bags",
+        "lavBrooch": "Lavalier brooch"
+    },
+    "footer": {
+        "contactUs": "Contact us",
+        "adress": "Kharkov, Ukraine",
+        "usefulLinks": "Useful links"
+    }
+}
