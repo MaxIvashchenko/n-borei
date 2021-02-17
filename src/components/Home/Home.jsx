@@ -8,7 +8,7 @@ import brooch from '../../images/main/brooch_title.png'
 import lavBrooch from '../../images/main/lavBrooch_title.png'
 import ring from '../../images/main/rings_title.png'
 
-export default function Home({ getSelected }) {
+function Home({ getSelected }) {
 
     const categories = [
         { name: 'brooch', sizeClass: 'col-md-7', imgSrc: brooch, text: 'Brooch' },
@@ -21,14 +21,12 @@ export default function Home({ getSelected }) {
     return (
         <Animated className="Home">
             <Banner />
-
-
             <div className="container">
                 <div className="row categoryShop">
 
                     {categories.map((category, i) => {
                         return (
-                            <button onClick={() => getSelected(category.text.split(' ').join(''))} className={'col-12 ' + category.sizeClass}>
+                            <button key={i} onClick={() => getSelected(category.text.split(' ').join(''))} className={'col-12 ' + category.sizeClass}>
                                 <Link to={'/shop'}>
                                     <div className={category.name}>
 
@@ -47,3 +45,5 @@ export default function Home({ getSelected }) {
         </Animated>
     )
 }
+
+export default Home

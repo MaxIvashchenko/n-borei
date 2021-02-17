@@ -1,8 +1,7 @@
 $gold-green: #b1a671;
 $brown: #7a5940;
 $gold: #b7914c;
- 
-  
+
 .variants {
     padding: 10px;
     div {
@@ -11,36 +10,90 @@ $gold: #b7914c;
         width: 25px;
         margin-right: 5px;
         margin-top: 5px;
-
     }
 
+    .darkBlue {
+        background: rgb(39, 37, 168);
+    }
+    .silverWhite {
+        background: radial-gradient(#e7e7e7, #ffffff);
+        box-sizing: border-box;
+        border: 1px solid rgb(206, 206, 206);
+    }
+    .goldPlum {
+        background: radial-gradient(#daa520, #8e4585);
+    }
+    .goldBlue {
+        background: radial-gradient(#daa520, rgb(39, 37, 168));
+    }
+    .goldRed {
+        background: radial-gradient(#daa520, rgb(199, 55, 50));
+    }
+    .pinkBlue {
+        background: radial-gradient(rgb(39, 37, 168), rgb(243, 117, 138));
+    }
+    .lightBlue {
+        background: rgb(49, 96, 197);
+    }
+    .silverBlue {
+        background: radial-gradient(rgb(39, 37, 168), rgb(231, 231, 231));
+    }
+    .purple {
+        background: #7c2172;
+        box-sizing: border-box;
+        border: 1px solid rgb(206, 206, 206);
+    }
+    .goldGreen {
+        background: radial-gradient(#daa520, rgb(9, 116, 17));
+    }
+    .gold {
+        background: #daa520;
+        box-sizing: border-box;
+        border: 1px solid rgb(206, 206, 206);
+    }
+    .pink {
+        background: rgb(243, 117, 138);
+    }
+    .roseBrown {
+        background: radial-gradient(#8f0f4f, rgb(243, 117, 138));
+    }
+    .green {
+        background: rgb(9, 116, 17);
+    }
 
-    .base {
-        background: rgb(186, 221, 186);
-    }
-    .blue {
-        background: rgb(141, 180, 238);
-    }
 }
 
-@media only screen and (max-width: 768px) {}
-
+@media only screen and (max-width: 768px) {
+}
 
 $basicFont: "Cormorant Garamond";
 
 $breakpoints: (
-    'medium-landscape':  (orientation : landscape ),
-    'extra-small':  ( max-width:  575px ),
-    'small':  ( max-width:  767px ),
-    'medium': ( max-width:  992px ),
-    'medium-large': ( max-width:  1024px ),
-    'min-large':  ( max-width: 1200px ),
-    'extra-large': ( max-width:  1450px ),
-    'large':  ( min-width: 1200px ),
-
+    "medium-landscape": (
+        orientation: landscape,
+    ),
+    "extra-small": (
+        max-width: 575px,
+    ),
+    "small": (
+        max-width: 767px,
+    ),
+    "medium": (
+        max-width: 992px,
+    ),
+    "medium-large": (
+        max-width: 1024px,
+    ),
+    "min-large": (
+        max-width: 1200px,
+    ),
+    "extra-large": (
+        max-width: 1450px,
+    ),
+    "large": (
+        min-width: 1200px,
+    ),
 ) !default;
-
- 
 
 @import "./components/banner/Banner.scss";
 @import "./components/header/Header.scss";
@@ -52,6 +105,5 @@ $breakpoints: (
 @import "./components/common/Common.scss";
 
 @import "./components/shop/ShowItem/ShowItem.scss";
-
 
 @import "./components/orderAndShipment/OrderAndShipment.scss";

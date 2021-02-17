@@ -11,15 +11,16 @@ export default function ItemList({ items }) {
         const path = `shop/${item.title}/${item.name}`
         const showItem = () => {
             if (item.variants) {
+                const arrayMin = (arr) => arr.reduce((p, v) => (p.price < v.price ? p : v));
 
-                const startPrice = item.variants.reduce((a, b) => Math.min(a.price, b.price))
+                const startPrice = arrayMin(item.variants).price
                 const isAvailable = item.variants.some((a, b) => a.available === 'available')
                 const colors = item.variants.map((variant, i) => <div key={variant.color + '-' + i} className={variant.color}></div>)
                 const priceStatus = () => {
                     return (isAvailable ?
-                        <li className={"item-status available"}>available</li>
+                        <li className="item-status available">available</li>
                         :
-                        <li className={"item-status sold"}>sold</li>)
+                        <li className="item-status sold">sold</li>)
                 }
                 item.available = isAvailable ? 'available' : 'sold'
                 item.price = startPrice

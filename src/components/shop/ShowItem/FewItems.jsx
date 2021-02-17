@@ -4,8 +4,12 @@ export default function FewItems({ numOfImg, setnumOfImg, item }) {
     const [activeItem, setactiveItem] = useState(0)
 
     const colors = item.variants.map((variant, i) => {
+        const changeState = (i) => {
+            setactiveItem(i)
+            setnumOfImg(0)
+        }
         return (
-            <button onClick={()=>setactiveItem(i)} key={variant.color + '-' + i} className={activeItem === i ? "activeVariant "+variant.color : variant.color}></button>
+            <button onClick={() => changeState(i)} key={variant.color + '-' + i} className={activeItem === i ? "activeVariant " + variant.color : variant.color}></button>
         )
     })
 
@@ -57,7 +61,6 @@ export default function FewItems({ numOfImg, setnumOfImg, item }) {
                     />
                     <div className="imageRow">
                         {item.variants[activeItem].images.map((image, i) => {
-
                             return (
                                 <button onClick={() => setnumOfImg(i)} key={"imageInROw " + i}>
                                     <img className={i === numOfImg ? "activeImg" : "none"}

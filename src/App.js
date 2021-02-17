@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './App.scss';
-import Header from './components/header/Header';
+import Header from './components/Header/Header';
 import Home from './components/Home/Home';
 
 import AboutAuthor from './components/about-author/AboutAuthor';
@@ -22,34 +22,40 @@ function App() {
 
   const [shopPage, setshopPage] = useState("Lavalierbrooch")
 
+  const mainPage = '/'
+
   return (
-    <Router>
-      <Header />
-      <Switch>
-        
-        <Route exact onlyActiveOnIndex={true} path="/shop">
-          <Shop
-            getSelected={setshopPage}
-            filters={filters}
-            selected={shopPage}
-            items={items}
-          />
-        </Route>
-        <Route exact path="/">
-          <Home getSelected={setshopPage} />
-        </Route>
+    <Router
+    // basename="/n-borei"
+    >
+        <Header mainPage={mainPage} />
+        <Switch>
 
-        <Route exact path="/about" component={AboutAuthor} />
-        <Route exact path="/order" component={OrderAndShipment} />
-        <Route exact path="/contacts" component={Contacts} />
-        <Route exact path="/about" component={AboutAuthor} />
-        <Route path="/shop/:title/:name" component={ShowItem} />
+          <Route exact onlyActiveOnIndex={true} path="/shop">
+            <Shop
+              getSelected={setshopPage}
+              filters={filters}
+              selected={shopPage}
+              items={items}
+            />
+          </Route>
+          <Route exact path={mainPage}>
+            <Home getSelected={setshopPage} />
+          </Route>
 
-        <Route exact path="/*" component={NotFound} />
+          <Route exact path="/about" component={AboutAuthor} />
+          <Route exact path="/order" component={OrderAndShipment} />
+          <Route exact path="/contacts" component={Contacts} />
+          <Route path="/shop/:title/:name" component={ShowItem} />
 
+          <Route exact path="/*" >
+            <NotFound mainPage={mainPage} />
+          </Route>
+
+        </Switch>
         <ScrollToTop />
-      </Switch>
-      <Footer />
+
+        <Footer mainPage={mainPage} />
     </Router>
   );
 }

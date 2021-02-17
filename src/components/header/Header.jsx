@@ -1,10 +1,11 @@
 import React from 'react'
 import shortLogo from '../../images/shortLogo.png'
-import {  Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import NavItem from './NavItem'
 
-export default function Header() {
+export default function Header({ mainPage }) {
+
     return (
         <nav className="Header navbar navbar-expand-lg navbar-light justify-content-end Header" >
             <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
@@ -12,7 +13,7 @@ export default function Header() {
                 <span className="navbar-toggler-icon"></span>
             </button>
             <div className="brand-centered">
-                <Link to='/' className="navbar-brand " ><img id="shortLogo" src={shortLogo} alt="small logo" /></Link>
+                <Link to={mainPage} className="navbar-brand " ><img id="shortLogo" src={shortLogo} alt="small logo" /></Link>
             </div>
             <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div className="navbar-nav menu-btn navbar-left ">

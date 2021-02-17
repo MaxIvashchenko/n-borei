@@ -2,7 +2,7 @@ import React from 'react'
 import shortLogo from '../../images/shortLogo.png'
 import { Link } from "react-router-dom";
 
-export default function Footer() {
+export default function Footer({mainPage}) {
     const links = {
         facebook: "https://www.facebook.com/Nataly.la.perla/",
         instagram: "https://www.instagram.com/accounts/login/?next=%2Fbeads__line%2F&source=follow",
@@ -34,7 +34,7 @@ export default function Footer() {
                     </div>
                     <div className="col-12 col-md-4 footerNavigation">
                         <h3>Useful links</h3>
-                        <Link to='/'>Home</Link>
+                        <Link to={mainPage}>Home</Link>
                         <Link to='/about'>About</Link>
                         <Link to='/shop'>Shop</Link>
                         <Link to='/order'>Order & Shipping</Link>
