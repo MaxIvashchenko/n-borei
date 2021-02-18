@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/n-borei/static/css/main.3cb03bfc.chunk.css",
-    "main.js": "/n-borei/static/js/main.0f1de45c.chunk.js",
-    "main.js.map": "/n-borei/static/js/main.0f1de45c.chunk.js.map",
-    "runtime-main.js": "/n-borei/static/js/runtime-main.a1cd830e.js",
-    "runtime-main.js.map": "/n-borei/static/js/runtime-main.a1cd830e.js.map",
+    "main.css": "/n-borei/static/css/main.ccd35a79.chunk.css",
+    "main.js": "/n-borei/static/js/main.a2a31d48.chunk.js",
+    "main.js.map": "/n-borei/static/js/main.a2a31d48.chunk.js.map",
+    "runtime-main.js": "/n-borei/static/js/runtime-main.da1f064b.js",
+    "runtime-main.js.map": "/n-borei/static/js/runtime-main.da1f064b.js.map",
     "static/css/2.69121389.chunk.css": "/n-borei/static/css/2.69121389.chunk.css",
-    "static/js/2.1684939b.chunk.js": "/n-borei/static/js/2.1684939b.chunk.js",
-    "static/js/2.1684939b.chunk.js.map": "/n-borei/static/js/2.1684939b.chunk.js.map",
+    "static/js/2.bf03d33b.chunk.js": "/n-borei/static/js/2.bf03d33b.chunk.js",
+    "static/js/2.bf03d33b.chunk.js.map": "/n-borei/static/js/2.bf03d33b.chunk.js.map",
     "index.html": "/n-borei/index.html",
-    "precache-manifest.82f81bab20b0883c53114af401b517cd.js": "/n-borei/precache-manifest.82f81bab20b0883c53114af401b517cd.js",
+    "precache-manifest.8f3844be872df9fa0085670bb42c832c.js": "/n-borei/precache-manifest.8f3844be872df9fa0085670bb42c832c.js",
     "service-worker.js": "/n-borei/service-worker.js",
     "static/css/2.69121389.chunk.css.map": "/n-borei/static/css/2.69121389.chunk.css.map",
-    "static/css/main.3cb03bfc.chunk.css.map": "/n-borei/static/css/main.3cb03bfc.chunk.css.map",
-    "static/js/2.1684939b.chunk.js.LICENSE.txt": "/n-borei/static/js/2.1684939b.chunk.js.LICENSE.txt",
+    "static/css/main.ccd35a79.chunk.css.map": "/n-borei/static/css/main.ccd35a79.chunk.css.map",
+    "static/js/2.bf03d33b.chunk.js.LICENSE.txt": "/n-borei/static/js/2.bf03d33b.chunk.js.LICENSE.txt",
     "static/media/AquaworldSmall__1.jpg": "/n-borei/static/media/AquaworldSmall__1.8ea8dee5.jpg",
     "static/media/AquaworldSmall__2.jpg": "/n-borei/static/media/AquaworldSmall__2.7e26e5ec.jpg",
     "static/media/Aquaworld__1.jpg": "/n-borei/static/media/Aquaworld__1.6e85aba9.jpg",
@@ -63,8 +63,12 @@
     "static/media/RoyalGoldBeetle__2.jpg": "/n-borei/static/media/RoyalGoldBeetle__2.767231f7.jpg",
     "static/media/RoyalGoldBeetle__3.gif": "/n-borei/static/media/RoyalGoldBeetle__3.6cbb4a28.gif",
     "static/media/RoyalGreenBeetle__1.jpg": "/n-borei/static/media/RoyalGreenBeetle__1.5dee9217.jpg",
+    "static/media/RoyalPurpureBeetle__1.jpeg": "/n-borei/static/media/RoyalPurpureBeetle__1.a604af42.jpeg",
     "static/media/RoyalRedBeetle__1.jpg": "/n-borei/static/media/RoyalRedBeetle__1.125d5e6b.jpg",
     "static/media/RoyalRedBeetle__2.jpg": "/n-borei/static/media/RoyalRedBeetle__2.b1cc13f2.jpg",
+    "static/media/SecretGarden__1.jpg": "/n-borei/static/media/SecretGarden__1.f84cdeba.jpg",
+    "static/media/SecretGarden__2.jpg": "/n-borei/static/media/SecretGarden__2.7a7264a8.jpg",
+    "static/media/SecretGarden__3.jpg": "/n-borei/static/media/SecretGarden__3.223bd9d2.jpg",
     "static/media/Silkmoth__1.jpg": "/n-borei/static/media/Silkmoth__1.7fae09b6.jpg",
     "static/media/Silkmoth__2.jpg": "/n-borei/static/media/Silkmoth__2.ff120f09.jpg",
     "static/media/Silkmoth__3.jpg": "/n-borei/static/media/Silkmoth__3.139e1287.jpg",
@@ -88,10 +92,10 @@
     "static/media/App.scss": "/n-borei/static/media/wallpaper.7340427b.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.a1cd830e.js",
+    "static/js/runtime-main.da1f064b.js",
     "static/css/2.69121389.chunk.css",
-    "static/js/2.1684939b.chunk.js",
-    "static/css/main.3cb03bfc.chunk.css",
-    "static/js/main.0f1de45c.chunk.js"
+    "static/js/2.bf03d33b.chunk.js",
+    "static/css/main.ccd35a79.chunk.css",
+    "static/js/main.a2a31d48.chunk.js"
   ]
 }

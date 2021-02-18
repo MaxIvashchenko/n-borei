@@ -1,31 +1,31 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "69bc44b449b9ef7e9489878f83ba9dae",
+    "revision": "a2e3997143884678481633a7f98bb90b",
     "url": "/n-borei/index.html"
   },
   {
-    "revision": "c03f3ef101893a7ef40f",
+    "revision": "52ac4699f2c5b5a56ee4",
     "url": "/n-borei/static/css/2.69121389.chunk.css"
   },
   {
-    "revision": "e5440b313d5507fec9d3",
-    "url": "/n-borei/static/css/main.3cb03bfc.chunk.css"
+    "revision": "bcf3e39d3ff0ef0a5d4c",
+    "url": "/n-borei/static/css/main.ccd35a79.chunk.css"
   },
   {
-    "revision": "c03f3ef101893a7ef40f",
-    "url": "/n-borei/static/js/2.1684939b.chunk.js"
+    "revision": "52ac4699f2c5b5a56ee4",
+    "url": "/n-borei/static/js/2.bf03d33b.chunk.js"
   },
   {
     "revision": "3453b8997016469371284a28c0e873e2",
-    "url": "/n-borei/static/js/2.1684939b.chunk.js.LICENSE.txt"
+    "url": "/n-borei/static/js/2.bf03d33b.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "e5440b313d5507fec9d3",
-    "url": "/n-borei/static/js/main.0f1de45c.chunk.js"
+    "revision": "bcf3e39d3ff0ef0a5d4c",
+    "url": "/n-borei/static/js/main.a2a31d48.chunk.js"
   },
   {
-    "revision": "2eab1424cec6f55465ea",
-    "url": "/n-borei/static/js/runtime-main.a1cd830e.js"
+    "revision": "c4f693ce8d186e1e75fa",
+    "url": "/n-borei/static/js/runtime-main.da1f064b.js"
   },
   {
     "revision": "8ea8dee5927111e379c7dbc83a1fefbb",
@@ -264,12 +264,28 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/n-borei/static/media/RoyalGreenBeetle__1.5dee9217.jpg"
   },
   {
+    "revision": "a604af42051c8fd8f0dce73cbed2b912",
+    "url": "/n-borei/static/media/RoyalPurpureBeetle__1.a604af42.jpeg"
+  },
+  {
     "revision": "125d5e6bf1b57d5050a297abb56cf6bf",
     "url": "/n-borei/static/media/RoyalRedBeetle__1.125d5e6b.jpg"
   },
   {
     "revision": "b1cc13f274262d98b7b3ba03e54add1a",
     "url": "/n-borei/static/media/RoyalRedBeetle__2.b1cc13f2.jpg"
+  },
+  {
+    "revision": "f84cdebace0e72f8b4b7bf0e4b84e92a",
+    "url": "/n-borei/static/media/SecretGarden__1.f84cdeba.jpg"
+  },
+  {
+    "revision": "7a7264a899a55d96d244cf2418f3b851",
+    "url": "/n-borei/static/media/SecretGarden__2.7a7264a8.jpg"
+  },
+  {
+    "revision": "223bd9d2b01d5366cb099e557d74be9e",
+    "url": "/n-borei/static/media/SecretGarden__3.223bd9d2.jpg"
   },
   {
     "revision": "772809a16307e6d1244cd3ad90b8d6e5",
