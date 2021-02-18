@@ -18,18 +18,12 @@ export default function Shop({ items, getSelected, selected, filters }) {
                 return
         }
     }
-    const filterByAvailability = (item) => selectedAvailable === 'all' ? item : item.available === 'available'
-    const showItems = items.filter(item => item.title.split(' ').join('') === selected)
+    const filterByAvailability = (item) => selectedAvailable === 'all' ? item : item.available === 'available';
+    const filterBySelection = item => item.title.split(' ').join('') === selected
+    const showItems = items
+        .filter(filterBySelection)
         .filter(filterByAvailability)
         .sort(sortByPrice)
-
-
-
-
-
-    const onSelectFilter = (filter) => getSelected(filter)
-    const filterShowAvailable = (button) => setSelectedAvailable(button)
-    const filterSortPrice = (button) => setSelectedPrice(button)
 
     return (
         <>
@@ -39,15 +33,15 @@ export default function Shop({ items, getSelected, selected, filters }) {
                         <Toolbar
                             filters={filters}
                             selected={selected}
-                            onSelectFilter={(filter) => onSelectFilter(filter)}
+                            onSelectFilter={getSelected}
                         />
                     </aside>
 
                     <div className="col-12 col-md-9">
                         {items.length > 1 ?
                             <FilterSettings
-                                filterShowAvailable={(filter) => filterShowAvailable(filter)}
-                                filterSortPrice={(filter) => filterSortPrice(filter)}
+                                filterShowAvailable={setSelectedAvailable}
+                                filterSortPrice={setSelectedPrice}
                                 selectedAvailable={selectedAvailable}
                                 selectedPrice={selectedPrice}
                             />
@@ -56,9 +50,7 @@ export default function Shop({ items, getSelected, selected, filters }) {
                             <Animated className="noFilter" animationIn="bounceInRight" animationOut="fadeOut" />
                         }
                         <div className="row">
-
                             <ItemList items={showItems} />
-
                         </div>
                     </div>
                 </div>

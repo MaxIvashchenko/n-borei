@@ -17,5 +17,13 @@
         "contactUs": "Связаться с нами",
         "adress": "Харьков, Украина",
         "usefulLinks": "Навигация"
+    },
+    "shop": {
+        "filter": {
+            "all": "Все",
+            "instock": "В наличии",
+            "priceUp" : "цена ↑",
+            "priceDown": "цена ↓"
+        }
     }
 }

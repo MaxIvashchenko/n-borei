@@ -17,5 +17,13 @@
         "contactUs": "Contact us",
         "adress": "Kharkov, Ukraine",
         "usefulLinks": "Useful links"
+    },
+    "shop": {
+        "filter": {
+            "all": "All",
+            "instock": "in stock",
+            "priceUp" : "price ↑",
+            "priceDown": "price ↓"
+        }
     }
 }
