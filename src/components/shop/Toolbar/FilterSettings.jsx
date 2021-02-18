@@ -6,22 +6,21 @@ export default function FilterSettings({ filterShowAvailable, filterSortPrice, s
 
     const filterSettings = ["all", "in stock"]
     const priceFil = ["price ↓", "price ↑"]
-    const filterAvailableButtons = () => {
-        return (
-            <>
-                {filterSettings.map((buttonName, i) =>
-                    <li className="nav-item" key={i + " " + buttonName}>
-                        <button
-                            onClick={e => filterShowAvailable(buttonName)}
-                            className={buttonName === selectedAvailable ? "filter-selected   nav-link" : "unselected nav-link "}
-                        >{
-                                buttonName}
-                        </button>
-                    </li>
-                )}
-            </>
-        )
-    }
+    const filterAvailableButtons = (
+        <>
+            {filterSettings.map((buttonName, i) =>
+                <li className="nav-item" key={i + " " + buttonName}>
+                    <button
+                        onClick={e => filterShowAvailable(buttonName)}
+                        className={buttonName === selectedAvailable ? "filter-selected   nav-link" : "unselected nav-link "}
+                    >{
+                            buttonName}
+                    </button>
+                </li>
+            )}
+        </>
+    )
+
     const filterByPrice = (
         <>
             {priceFil.map((buttonName, i) =>
@@ -43,7 +42,7 @@ export default function FilterSettings({ filterShowAvailable, filterSortPrice, s
             <Animated isVisible={true} animationIn="bounceInRight" animationOut="bounceInLeft" >
                 <div className="row settings-filter">
                     <ul className="nav col-12 justify-content-center">
-                        {filterAvailableButtons()}
+                        {filterAvailableButtons}
                         {filterByPrice}
                     </ul>
                 </div>

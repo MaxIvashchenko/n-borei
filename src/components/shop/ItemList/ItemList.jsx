@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom'
 
 
 export default function ItemList({ items }) {
+
     const itemList = items.map(function (item, i) {
 
         const path = `shop/${item.title}/${item.name}`
@@ -13,15 +14,13 @@ export default function ItemList({ items }) {
                 const arrayMin = (arr) => arr.reduce((p, v) => (p.price < v.price ? p : v));
 
                 const startPrice = arrayMin(item.variants).price
-                const isAvailable = item.variants.some((a, b) => a.available === 'available')
+                const isAvailable = item.variants.some(a => a.available === 'available')
+                const status = isAvailable ? "available" : "sold";
+
                 const colors = item.variants.map((variant, i) => <div key={variant.color + '-' + i} className={variant.color}></div>)
-                const priceStatus = () => {
-                    return (isAvailable ?
-                        <li className="item-status available">available</li>
-                        :
-                        <li className="item-status sold">sold</li>)
-                }
-                item.available = isAvailable ? 'available' : 'sold'
+                const priceStatus = () => <li className={`item-status ${status}`}>{status}</li>
+
+                item.available = status
                 item.price = startPrice
                 return (
                     <>

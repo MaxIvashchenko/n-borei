@@ -1,90 +1,69 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Toolbar from './Toolbar/Toolbar';
 import ItemList from './ItemList/ItemList';
 import FilterSettings from './Toolbar/FilterSettings';
 import { Animated } from 'react-animated-css'
 
-export default class Shop extends React.Component {
+export default function Shop({ items, getSelected, selected, filters }) {
+    const [selectedAvailable, setSelectedAvailable] = useState('all');
+    const [selectedPrice, setSelectedPrice] = useState('');
 
-    constructor(props) {
-        super(props);
-
-        this.items = props.items;
-        this.getSelected = props.getSelected;
-
-
-        this.state = {
-            filters: props.filters,
-            selected: props.selected,
-            items: props.items.filter(item => item.title.split(' ').join('') === props.selected),
-            arr: props.items.filter(item => item.title.split(' ').join('') === props.selected),
-            isVis: true,
-            selectedAvailable: 'all',
-            selectedPrice: '',
+    const sortByPrice = (a, b) => {
+        switch (selectedPrice) {
+            case 'price ↓':
+                return b.price - a.price;
+            case 'price ↑':
+                return a.price - b.price;
+            default:
+                return
         }
     }
- 
+    const filterByAvailability = (item) => selectedAvailable === 'all' ? item : item.available === 'available'
+    const showItems = items.filter(item => item.title.split(' ').join('') === selected)
+        .filter(filterByAvailability)
+        .sort(sortByPrice)
 
-    onSelectFilter = (filter) => {
-        this.getSelected(filter)
-        return this.setState({
-            selectedAvailable: 'all',
-            selectedPrice: '',
-            isVis: true,
-            selected: filter,
-            items: this.items.filter(item => item.title.split(' ').join('') === filter),
-            arr: this.items.filter(item => item.title.split(' ').join('') === filter),
-        })
-    }
-    filterShowAvailable = (button) => {
-        return this.setState({
-            selectedAvailable: button,
-            arr: button === 'all' ? this.state.items : this.state.items.filter(item => item.available === 'available')
-        })
-    }
-    filterSortPrice = (button) => {
-        return this.setState({
-            selectedPrice: button,
 
-            arr: button === 'price ↓' ? this.state.arr.sort((a, b) => b.price - a.price) : this.state.arr.sort((a, b) => a.price - b.price)
-        })
-    }
-   
-    render() {
-       
-        return (
-            <>
-                <section className="container-fluid Shop"   >
-                    <div className="row " >
-                        <aside className="col-12 col-md-3 nav-shop" >
-                            <Toolbar
-                                filters={this.state.filters}
-                                selected={this.state.selected}
-                                onSelectFilter={(filter) => this.onSelectFilter(filter)}
+
+
+
+    const onSelectFilter = (filter) => getSelected(filter)
+    const filterShowAvailable = (button) => setSelectedAvailable(button)
+    const filterSortPrice = (button) => setSelectedPrice(button)
+
+    return (
+        <>
+            <section className="container-fluid Shop"   >
+                <div className="row " >
+                    <aside className="col-12 col-md-3 nav-shop" >
+                        <Toolbar
+                            filters={filters}
+                            selected={selected}
+                            onSelectFilter={(filter) => onSelectFilter(filter)}
+                        />
+                    </aside>
+
+                    <div className="col-12 col-md-9">
+                        {items.length > 1 ?
+                            <FilterSettings
+                                filterShowAvailable={(filter) => filterShowAvailable(filter)}
+                                filterSortPrice={(filter) => filterSortPrice(filter)}
+                                selectedAvailable={selectedAvailable}
+                                selectedPrice={selectedPrice}
                             />
-                        </aside>
-                        
-                        <div className="col-12 col-md-9">
-                            {this.state.items.length > 1 ?
-                                <FilterSettings
-                                    filterShowAvailable={(filter) => this.filterShowAvailable(filter)}
-                                    filterSortPrice={(filter) => this.filterSortPrice(filter)}
-                                    selectedAvailable={this.state.selectedAvailable}
-                                    selectedPrice={this.state.selectedPrice}
-                                />
-                                : 
+                            :
 
-                                <Animated className="noFilter" animationIn="bounceInRight" animationOut="fadeOut" />
-                                }
-                            <div className="row">
-                            
-                               <ItemList items={this.state.arr} />
-                              
-                            </div>
+                            <Animated className="noFilter" animationIn="bounceInRight" animationOut="fadeOut" />
+                        }
+                        <div className="row">
+
+                            <ItemList items={showItems} />
+
                         </div>
                     </div>
-                </section>
-            </>
-        )
-    }
+                </div>
+            </section>
+        </>
+    )
 }
+

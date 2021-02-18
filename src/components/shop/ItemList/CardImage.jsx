@@ -3,9 +3,9 @@ import Carousel from 'react-bootstrap/Carousel'
 import ImageLoader from 'react-imageloader';
 function preloader() {
     return (
-        <div class="d-flex justify-content-center">
-            <div style={{color: '#7a5940'}} class="spinner-border" role="status">
-                <span class="sr-only">Loading...</span>
+        <div className="d-flex justify-content-center">
+            <div style={{color: '#7a5940'}} className="spinner-border" role="status">
+                <span className="sr-only">Loading...</span>
             </div>
         </div>
     )
