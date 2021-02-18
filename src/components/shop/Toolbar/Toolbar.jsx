@@ -5,7 +5,7 @@ import { Animated } from 'react-animated-css'
 
 export default function Toolbar(props) {
     const { filters, selected, onSelectFilter } = props;
-    const { t, i18n } = useTranslation('common');
+    const { t } = useTranslation('common');
 
     const showText = (text) => text === "Lavalier brooch" ? "lavBrooch" : text.toLowerCase()
 

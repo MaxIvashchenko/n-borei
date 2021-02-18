@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { useTranslation } from "react-i18next";
 import { Animated } from 'react-animated-css'
 import { Link } from 'react-router-dom'
 import backImg from '../../../images/back.svg'
@@ -6,6 +7,8 @@ import FewItems from './FewItems'
 import NotFound from '../../common/NotFound'
 
 export default function Item(props) {
+    const { t, i18n } = useTranslation('common');
+    const lang = i18n.language;
     const [numOfImg, setnumOfImg] = useState(0)
     if (!props.location.state) return <NotFound />
     const item = props.location.state.item
@@ -23,27 +26,27 @@ export default function Item(props) {
                         <div className="row">
                             <div className="col-12 col-md-6 textBlock">
 
-                                <h2>{item.name}</h2>
+                                <h2>{item[lang].name}</h2>
                                 <p className='id'>#{item.id}</p>
                                 <hr className="line" />
 
-                                <h4>Price:</h4>
+                                <h4>{t("shop.showItem.price")}</h4>
                                 <div className={`priceBlock ${item.available}`}>
                                     <p>{item.price}€</p>
-                                    <p>{item.available}</p>
+                                    <p>{t(`shop.filter.${item.available}`)}</p>
                                 </div>
                                 <hr className="line" />
 
-                                <h4>Description:</h4>
-                                <h5>{item.description}</h5>
+                                <h4>{t("shop.showItem.description")}</h4>
+                                <h5>{item[lang].description}</h5>
                                 <hr className="line" />
 
-                                <h4>Material:</h4>
-                                <h5>{item.material}</h5>
+                                <h4>{t("shop.showItem.material")}</h4>
+                                <h5>{item[lang].material}</h5>
                                 <hr className="line" />
 
-                                <h4>Measurements:</h4>
-                                <h5>{item.dimensions}</h5>
+                                <h4>{t("shop.showItem.measurements")}</h4>
+                                <h5>{item.dimensions} {t(`shop.filter.dimension`)}</h5>
 
                             </div>
 
@@ -61,7 +64,7 @@ export default function Item(props) {
                                             <button onClick={() => setnumOfImg(i)} key={"imageInROw " + i}>
                                                 <img className={i === numOfImg ? "activeImg" : "none"}
                                                     src={require('../../../images/' + image + '')}
-                                                    alt={item.name + "-photo-" + i}
+                                                    alt={item.en.name + "-photo-" + i}
                                                 />
                                             </button>
                                         )
