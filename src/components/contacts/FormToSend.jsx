@@ -1,8 +1,11 @@
 import React from 'react'
-import axios from "axios"
+import { useFormik } from 'formik';
+import * as Yup from 'yup';
+import { Form, Button } from 'react-bootstrap';
 
-export default class FormToSend extends React.Component {
-    state = {
+export default function FormToSend() {
+
+    const initialValues = {
         name: '',
         email: '',
         phone: '',
@@ -10,78 +13,99 @@ export default class FormToSend extends React.Component {
         isSend: false
     }
 
-    handleName = (e) => this.setState({ name: e.target.value })
-    handleEmail = (e) => this.setState({ email: e.target.value })
-    handlePhone = (e) => this.setState({ phone: e.target.value })
-    handleMessage = (e) => this.setState({ message: e.target.value })
-    resetFrom = (e) => {
-        this.setState({
-            name: '',
-            email: '',
-            phone: '',
-            message: '',
-        })
-        setTimeout(() => {
-            this.setState({ isSend: false })
-        }, 3000)
+    const formik = useFormik({
+        initialValues,
+        validationSchema: Yup.object({
+            firstName: Yup.string()
+                .min(9, 'Must be 9 characters or more')
+                .max(15, 'Must be 15 characters or less')
+                .required('Required'),
+            email: Yup.string().email('Invalid email address').required('Required'),
+            phone: Yup.string()
+                .min(9, 'Must be 9 characters or more')
+                .max(20, 'Must be 20 characters or less')
+                .required('Required'),
+            message: Yup.string().min(9, 'Must be 9 characters or more').required('Required'),
+        }),
+        onSubmit: values => {
 
-    }
+            console.log(values)
+        },
+    })
 
-    fromSubmit = e => {
-        e.preventDefault()
-        const data = {
-            name: this.state.name,
-            email: this.state.email,
-            phone: this.state.phone,
-            message: this.state.message,
-        }
-        axios.post('/api/forma', data)
-            .then(res => {
-                this.setState({ isSend: true }, this.resetFrom())
+    return (
+        <>
+            <form onSubmit={formik.handleSubmit}>
+                <Form.Group>
+                    <Form.Label>First Name</Form.Label>
+                    <Form.Control
+                        aria-describedby="inputGroupPrepend"
+                        id="firstName"
+                        type="text"
+                        placeholder="Enter firstName"
+                        {...formik.getFieldProps('firstName')}
+                        isInvalid={formik.touched.firstName && !!formik.errors.firstName}
+                        isValid={formik.touched.firstName && !formik.errors.firstName}
+                    />
+                    <Form.Control.Feedback type="invalid">
+                        {formik.errors.firstName}
+                    </Form.Control.Feedback>
+                </Form.Group>
 
-            })
-            .catch(() => console.log('message don\'t sent'))
+                <Form.Group>
+                    <Form.Label>Email address</Form.Label>
+                    <Form.Control
+                        aria-describedby="inputGroupPrepend"
+                        id="email"
+                        type="email"
+                        placeholder="Enter email"
+                        {...formik.getFieldProps('email')}
+                        isInvalid={formik.touched.email && !!formik.errors.email}
+                        isValid={formik.touched.email && !formik.errors.email}
+                    />
+                    <Form.Control.Feedback type="invalid">
+                        {formik.errors.email}
+                    </Form.Control.Feedback>
+                </Form.Group>
 
-    }
 
-    render() {
-        console.log(this.state)
-        return (
-            <>
-                <section>
-                    <div>
-                        <div className="row">
-                            <div className="col-sm-12">
-                                <div className="row">
-                                    <div className="col-10 ">
-                                        <div>
-                                            <h2>CONTACT US</h2>
-                                        </div>
-                                        <form method="post" data-form-title="CONTACT US">
-                                            <input type="hidden" data-form-email="true" />
-                                            <div className="form-group">
-                                                <input value={this.state.name} onChange={(e) => this.handleName(e)} type="text" className="form-control" name="name" required="" placeholder="Name*" />
-                                            </div>
-                                            <div className="form-group">
-                                                <input value={this.state.email} onChange={(e) => this.handleEmail(e)} type="email" className="form-control" name="email" required="" placeholder="Email*" />
-                                            </div>
-                                            <div className="form-group">
-                                                <input value={this.state.phone} onChange={(e) => this.handlePhone(e)} type="tel" className="form-control" name="phone" placeholder="Phone" />
-                                            </div>
-                                            <div className="form-group">
-                                                <textarea value={this.state.message} onChange={(e) => this.handleMessage(e)} className="form-control" name="message" placeholder="Message" rows="2"  ></textarea>
-                                            </div>
-                                            <div>
-                                                <button onClick={() => this.fromSubmit()} type="submit" className="btn btn-lg btn-info">CONTACT US</button>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-            </>
-        );
-    }
+                <Form.Group>
+                    <Form.Label>Phone number</Form.Label>
+                    <Form.Control
+                        aria-describedby="inputGroupPrepend"
+                        id="phone"
+                        type="text"
+                        placeholder="phone"
+                        {...formik.getFieldProps('phone')}
+                        isInvalid={formik.touched.phone && !!formik.errors.phone}
+                        isValid={formik.touched.phone && !formik.errors.phone}
+                    />
+                    <Form.Control.Feedback type="invalid" >
+                        {formik.errors.phone}
+                    </Form.Control.Feedback>
+                </Form.Group>
+
+                <Form.Group>
+                    <Form.Label>Message</Form.Label>
+                    <Form.Control
+                        aria-describedby="inputGroupPrepend"
+                        id="message"
+                        as="textarea"
+                        type="text"
+                        placeholder="message"
+                        {...formik.getFieldProps('message')}
+                        isInvalid={formik.touched.message && !!formik.errors.message}
+                        isValid={formik.touched.message && !formik.errors.message}
+                    />
+                    <Form.Control.Feedback type="invalid" >
+                        {formik.errors.message}
+                    </Form.Control.Feedback>
+                </Form.Group>
+
+
+                <Button type="submit">Submit form</Button>
+            </form>
+        </>
+    );
+
 }

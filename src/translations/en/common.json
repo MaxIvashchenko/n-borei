@@ -13,6 +13,11 @@
         "bags": "Bags",
         "lavBrooch": "Lavalier brooch"
     },
+    "common": {
+        "notFound": "No Results Found",
+        "text": "The page you requested could not be found. Try to use the navigation above to locate the post.",
+        "back": "Back to Home"
+    },
     "footer": {
         "contactUs": "Contact us",
         "adress": "Kharkov, Ukraine",
@@ -37,7 +42,7 @@
             "measurements": "Measurements:"
         }
     },
-    "aboutAuthor" : {
+    "aboutAuthor": {
         "autor": {
             "title": "About author",
             "text1": "My name is Natalia. I am the author and creator of a jewelry brand titled Natali Borei. The artwork for me is a sense of being, a desire of creativity going on outside of space and time.",

@@ -1,8 +1,14 @@
 .Contacts {
-    margin: 10% auto;
+    margin: 5% auto;
     max-width: 1200px;
 
     /* contact section */
+    .textBox {
+        padding: 50 0;
+        background-color: red;
+        margin-bottom: "150px !important" ;
+        height: 200;
+    }
 
     .data-contacts {
         height: 400px;
