@@ -43,9 +43,9 @@ export default function Contacts() {
                                 </Col>
 
                                 <Col xs={12} md={12} className="mt-4">
-                                    <p>Круглосуточный прием заявок online</p>
-                                    <p>C удовольствием ответим на все Ваши вопросы.</p>
-                                    <p>Все украшения можно посмотреть в г. Харьков, Ураина.</p>
+                                    <p>{t('contacts.comment1')}</p>
+                                    <p>{t('contacts.comment2')}</p>
+                                    <p>{t('contacts.comment3')}</p>
                                 </Col>
                             </Row>
                         </Container>
