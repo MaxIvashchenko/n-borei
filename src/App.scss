@@ -95,15 +95,15 @@ $breakpoints: (
     ),
 ) !default;
 
-@import "./components/banner/Banner.scss";
-@import "./components/header/Header.scss";
+@import "./components/Banner/Banner.scss";
+@import "./components/Header/Header.scss";
 @import "./components/Home/Home.scss";
-@import "./components/about-author/AboutAuthor.scss";
-@import "./components/contacts/Contacts.scss";
-@import "./components/footer/Footer.scss";
-@import "./components/shop/Shop.scss";
-@import "./components/common/Common.scss";
+@import "./components/AboutAuthor/AboutAuthor.scss";
+@import "./components/Contacts/Contacts.scss";
+@import "./components/Footer/Footer.scss";
+@import "./components/Shop/Shop.scss";
+@import "./components/Common/Common.scss";
 
-@import "./components/shop/ShowItem/ShowItem.scss";
+@import "./components/Shop/ShowItem/ShowItem.scss";
 
-@import "./components/orderAndShipment/OrderAndShipment.scss";
+@import "./components/OrderAndShipment/OrderAndShipment.scss";

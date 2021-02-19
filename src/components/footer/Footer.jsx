@@ -2,7 +2,7 @@ import React from 'react'
 import { useTranslation } from "react-i18next";
 import shortLogo from '../../images/shortLogo.png'
 import { Link } from "react-router-dom";
-import {email, adress, phone} from "../../data/contacts";
+import {email, adress, phone} from "../../infoData/contacts";
 
 export default function Footer({ mainPage }) {
     const { t } = useTranslation('common');

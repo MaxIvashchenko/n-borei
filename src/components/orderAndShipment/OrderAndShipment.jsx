@@ -1,7 +1,7 @@
 import React from 'react'
 import { useTranslation } from "react-i18next";
-import SocialLink from '../common/SocialLink'
-import { socLink } from "../../data/contacts"
+import SocialLink from '../Common/SocialLink'
+import { socLink } from "../../infoData/contacts"
 
 export default function OrderAndShipment() {
     const { t } = useTranslation('common');

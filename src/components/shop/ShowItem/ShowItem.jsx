@@ -4,7 +4,7 @@ import { Animated } from 'react-animated-css'
 import { Link } from 'react-router-dom'
 import backImg from '../../../images/back.svg'
 import FewItems from './FewItems'
-import NotFound from '../../common/NotFound'
+import NotFound from '../../Common/NotFound'
 
 export default function Item(props) {
     const { t, i18n } = useTranslation('common');

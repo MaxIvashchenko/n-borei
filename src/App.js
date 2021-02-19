@@ -1,25 +1,21 @@
 import React, { useState,Suspense } from 'react';
 import './App.scss';
+import { items } from './data'
+import {ScrollToTop,NotFound} from './components/Common/index'
+
 import Header from './components/Header/Header';
 import Home from './components/Home/Home';
-
-import AboutAuthor from './components/about-author/AboutAuthor';
-import Footer from './components/footer/Footer';
-import OrderAndShipment from './components/orderAndShipment/OrderAndShipment';
-import Shop from './components/shop/Shop';
-import ShowItem from './components/shop/ShowItem/ShowItem';
-import { items } from './data'
-import Contacts from './components/contacts/Contacts';
-import ScrollToTop from './components/common/ScrollToTop'
-import NotFound from './components/common/NotFound'
-
-
+import AboutAuthor from './components/AboutAuthor/AboutAuthor';
+import Footer from './components/Footer/Footer';
+import OrderAndShipment from './components/OrderAndShipment/OrderAndShipment';
+import Shop from './components/Shop/Shop';
+import ShowItem from './components/Shop/ShowItem/ShowItem';
+import Contacts from './components/Contacts/Contacts';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
-
+const filters = ["Lavalier brooch", "Brooch", "Rings", "Bracelets", "Bags"]
 
 function App() {
-  const filters = ["Lavalier brooch", "Brooch", "Rings", "Bracelets", "Bags"]
 
   const [shopPage, setshopPage] = useState("Lavalierbrooch")
 

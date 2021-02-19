@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import Banner from '../banner/Banner';
+import Banner from '../Banner/Banner';
 import { Animated } from 'react-animated-css'
 import bracelet from '../../images/main/bracelets_title.png'
 import bag from '../../images/main/bags_title.png'
@@ -9,18 +9,16 @@ import brooch from '../../images/main/brooch_title.png'
 import lavBrooch from '../../images/main/lavBrooch_title.png'
 import ring from '../../images/main/rings_title.png'
 
-
+const categories = [
+    { name: 'brooch', sizeClass: 'col-md-7', imgSrc: brooch, text: 'Brooch' },
+    { name: 'bracelets', sizeClass: 'col-md-5', imgSrc: bracelet, text: 'Bracelets' },
+    { name: 'rings', sizeClass: 'col-md-3', imgSrc: ring, text: 'Rings' },
+    { name: 'bags', sizeClass: 'col-md-3', imgSrc: bag, text: 'Bags' },
+    { name: 'lavBrooch', sizeClass: 'col-md-6', imgSrc: lavBrooch, text: 'Lavalier brooch' },
+]
 
 function Home({ getSelected }) {
     const [t] = useTranslation('common');
-
-    const categories = [
-        { name: 'brooch', sizeClass: 'col-md-7', imgSrc: brooch, text: 'Brooch' },
-        { name: 'bracelets', sizeClass: 'col-md-5', imgSrc: bracelet, text: 'Bracelets' },
-        { name: 'rings', sizeClass: 'col-md-3', imgSrc: ring, text: 'Rings' },
-        { name: 'bags', sizeClass: 'col-md-3', imgSrc: bag, text: 'Bags' },
-        { name: 'lavBrooch', sizeClass: 'col-md-6', imgSrc: lavBrooch, text: 'Lavalier brooch' },
-    ]
 
     return (
         <Animated className="Home">
