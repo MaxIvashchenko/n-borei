@@ -2,6 +2,7 @@ import React from 'react'
 import { useTranslation } from "react-i18next";
 import shortLogo from '../../images/shortLogo.png'
 import { Link } from "react-router-dom";
+import {email, adress, phone} from "../../data/contacts";
 
 export default function Footer({ mainPage }) {
     const { t } = useTranslation('common');
@@ -19,15 +20,15 @@ export default function Footer({ mainPage }) {
                         <ul>
                             <li>
                                 <i className="fas fa-map-marker-alt"></i>
-                                <p>{t('footer.adress')}</p>
+                                <p>{t(adress)}</p>
                             </li>
                             <li>
                                 <i className="fas fa-phone"></i>
-                                <p>+38 (095) 324 0 777</p>
+                                <p>{phone}</p>
                             </li>
                             <li>
                                 <i className="far fa-envelope-open"></i>
-                                <span>beadsline@gmail.com</span>
+                                <span>{email}</span>
                             </li>
                         </ul>
                     </div>

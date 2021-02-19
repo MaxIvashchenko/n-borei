@@ -5,10 +5,8 @@ export default function SocialLink({ title, link }) {
     const cls = `fab fa-${title} ${title}-bg`;
     const renderTooltip = (props) => {
         return (
-            <Tooltip  {...props}
-                id="tooltip-top"
-            >
-              {title}
+            <Tooltip  {...props} id="tooltip-top"             >
+                {title}
             </Tooltip>
         );
     }
@@ -18,7 +16,6 @@ export default function SocialLink({ title, link }) {
             placement="bottom"
             delay={{ show: 150, hide: 400 }}
             overlay={renderTooltip}
-
         >
             <a title={title} href={link}>
                 <i className={cls}></i>

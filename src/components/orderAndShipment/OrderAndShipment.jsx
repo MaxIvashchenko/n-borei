@@ -1,25 +1,10 @@
 import React from 'react'
 import { useTranslation } from "react-i18next";
-import SocialLink from './SocialLink'
-
-const socLink = {
-    telegram: {
-        title: "telegram",
-        link: "tg://resolve?domain=natali_borei"
-    },
-    viber: {
-        title: "viber",
-        link: "viber://add?number=380953240777"
-    },
-    whatsapp: {
-        title: "whatsapp",
-        link: "whatsapp://send?phone=+380953240777"
-    }
-}
+import SocialLink from '../common/SocialLink'
+import { socLink } from "../../data/contacts"
 
 export default function OrderAndShipment() {
     const { t } = useTranslation('common');
-
 
     return (
         <div className="container">

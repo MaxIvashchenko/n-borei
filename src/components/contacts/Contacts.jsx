@@ -1,20 +1,14 @@
 import React from 'react'
+import { useTranslation } from "react-i18next";
 import FormToSend from './FormToSend'
 // import { Animated } from 'react-animated-css'
 import { Container, Row, Col } from 'react-bootstrap';
-import "./Contacts.scss";
-
-const styles = {
-    textBox: {
-        padding: "0 0 50px",
-        backgroundColor: "red",
-        color: "white",
-        marginBottom: "150px",
-
-    }
-}
+import { phone, email, adress } from '../../data/contacts'
+import SocialLink from "../common/SocialLink"
+import { socLink } from "../../data/contacts"
 
 export default function Contacts() {
+    const { t } = useTranslation('common');
     return (
         <>
             <section className="container-fluid Contacts">
@@ -23,30 +17,41 @@ export default function Contacts() {
                         <Container>
                             <Row>
                                 <Col xs={12} md={12} >
-                                    <div style={styles.textBox}>
-                                        <h3>Adress</h3>
-                                        <p>123103 Москва, проспект маршала Жукова, 68/1</p>
+                                    <div>
+                                        <h3>{t('contacts.titleAdress')}</h3>
+                                        <p>{t(adress)}</p>
                                     </div>
-
                                 </Col>
-
+                                <Col md={10} className="line mt-4 mb-4" />
                                 <Col xs={12} md={6}>
-                                    <h3>ТЕЛЕФОНЫ</h3>
-                                    <p>+7-915-449-83-76</p>
+                                    <h3>{t('footer.phone')}</h3>
+                                    <p>{phone}</p>
                                 </Col>
                                 <Col xs={12} md={6}>
-                                    <h3>E-MAIL</h3>
-                                    <p>info@yatany.ru</p>
+                                    <h3>{t('footer.email')}</h3>
+                                    <p>{email}</p>
                                 </Col>
-                                <Col xs={12} md={12}>
+                                <Col md={10} className="line mt-4 mb-4" />
+
+                                <Col xs={12} md={12} >
+                                    <div className="socLink">
+                                        <h3>{t('contacts.messengers')}</h3>
+                                        <SocialLink title={socLink.telegram.title} link={socLink.telegram.link} />
+                                        <SocialLink title={socLink.viber.title} link={socLink.viber.link} />
+                                        <SocialLink title={socLink.whatsapp.title} link={socLink.whatsapp.link} />
+                                    </div>
+                                </Col>
+
+                                <Col xs={12} md={12} className="mt-4">
                                     <p>Круглосуточный прием заявок online</p>
+                                    <p>C удовольствием ответим на все Ваши вопросы.</p>
+                                    <p>Все украшения можно посмотреть в г. Харьков, Ураина.</p>
                                 </Col>
                             </Row>
-
-
                         </Container>
                     </div>
                     <div className="col-11 col-md-4 form">
+                        <h3>{t('contacts.titleEmail')}</h3>
                         <FormToSend />
                     </div>
                 </div>

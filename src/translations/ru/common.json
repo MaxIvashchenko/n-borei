@@ -16,7 +16,32 @@
     "footer": {
         "contactUs": "Связаться с нами",
         "adress": "Харьков, Украина",
-        "usefulLinks": "Навигация"
+        "usefulLinks": "Навигация",
+        "phone": "Телефон:",
+        "email": "Почта:"
+    },
+    "contacts": {
+        "titleAdress": "Адресс:",
+        "titleEmail": "Написать Нам",
+        "messengers": "Мессенджеры:",
+        "name": "Имя:",
+        "namePlaceholder": "Введите свое имя",
+        "email": "Почта:",
+        "emailPlaceholder": "Введите свою почту",
+        "phone": "Мобильный телефон:",
+        "phonePlaceholder": "Введите свой телефон",
+        "message": "Сообщение:",
+        "messagePlaceholder": "Введите свое сообщение",
+        "submit": "Отправить",
+        "required": "Обязательно поле для ввода",
+        "moreChar": "Имя слишком короткое",
+        "lessChar": "Не больше 50 символов",
+        "phoneInvalid": "Некорректный номер телефона",
+        "emailInvalid": "Некорректный почтовый адресс",
+        "numberMore": "Не меньше 8 символов",
+        "numberLess": "Не больше 20 символов",
+        "messageMore": "Не меньше 9 символов"
+
     },
     "common": {
         "notFound": "Страница не найдена",

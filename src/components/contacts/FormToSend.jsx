@@ -1,9 +1,13 @@
 import React from 'react'
+import { useTranslation } from "react-i18next";
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import { Form, Button } from 'react-bootstrap';
 
+const phoneRegExp = /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/
+
 export default function FormToSend() {
+    const { t } = useTranslation('common');
 
     const initialValues = {
         name: '',
@@ -16,16 +20,20 @@ export default function FormToSend() {
     const formik = useFormik({
         initialValues,
         validationSchema: Yup.object({
-            firstName: Yup.string()
-                .min(9, 'Must be 9 characters or more')
-                .max(15, 'Must be 15 characters or less')
-                .required('Required'),
-            email: Yup.string().email('Invalid email address').required('Required'),
+            name: Yup.string()
+                .min(2, t('contacts.moreChar'))
+                .max(50, t('contacts.lessChar'))
+                .required(t('contacts.required')),
+            email: Yup.string()
+                .email(t('contacts.emailInvalid'))
+                .required(t('contacts.required')),
             phone: Yup.string()
-                .min(9, 'Must be 9 characters or more')
-                .max(20, 'Must be 20 characters or less')
-                .required('Required'),
-            message: Yup.string().min(9, 'Must be 9 characters or more').required('Required'),
+                .matches(phoneRegExp, t('contacts.phoneInvalid'))
+                .min(8, t('contacts.numberMore'))
+                .max(20, t('contacts.numberLess')),
+            message: Yup.string()
+            .min(9, t('contacts.messageMore'))
+            .required(t('contacts.required')),
         }),
         onSubmit: values => {
 
@@ -37,28 +45,27 @@ export default function FormToSend() {
         <>
             <form onSubmit={formik.handleSubmit}>
                 <Form.Group>
-                    <Form.Label>First Name</Form.Label>
+                    <Form.Label>{t('contacts.name')}</Form.Label>
                     <Form.Control
-                        aria-describedby="inputGroupPrepend"
-                        id="firstName"
+                        id="name"
                         type="text"
-                        placeholder="Enter firstName"
-                        {...formik.getFieldProps('firstName')}
-                        isInvalid={formik.touched.firstName && !!formik.errors.firstName}
-                        isValid={formik.touched.firstName && !formik.errors.firstName}
+                        placeholder={t('contacts.namePlaceholder')}
+                        {...formik.getFieldProps('name')}
+                        isInvalid={formik.touched.name && !!formik.errors.name}
+                        isValid={formik.touched.name && !formik.errors.name}
                     />
                     <Form.Control.Feedback type="invalid">
-                        {formik.errors.firstName}
+                        {formik.errors.name}
                     </Form.Control.Feedback>
                 </Form.Group>
 
                 <Form.Group>
-                    <Form.Label>Email address</Form.Label>
+                    <Form.Label>{t('contacts.email')}</Form.Label>
                     <Form.Control
                         aria-describedby="inputGroupPrepend"
                         id="email"
                         type="email"
-                        placeholder="Enter email"
+                        placeholder={t('contacts.emailPlaceholder')}
                         {...formik.getFieldProps('email')}
                         isInvalid={formik.touched.email && !!formik.errors.email}
                         isValid={formik.touched.email && !formik.errors.email}
@@ -70,12 +77,11 @@ export default function FormToSend() {
 
 
                 <Form.Group>
-                    <Form.Label>Phone number</Form.Label>
+                    <Form.Label>{t('contacts.phone')}</Form.Label>
                     <Form.Control
-                        aria-describedby="inputGroupPrepend"
                         id="phone"
                         type="text"
-                        placeholder="phone"
+                        placeholder={t('contacts.phonePlaceholder')}
                         {...formik.getFieldProps('phone')}
                         isInvalid={formik.touched.phone && !!formik.errors.phone}
                         isValid={formik.touched.phone && !formik.errors.phone}
@@ -86,13 +92,13 @@ export default function FormToSend() {
                 </Form.Group>
 
                 <Form.Group>
-                    <Form.Label>Message</Form.Label>
+                    <Form.Label>{t('contacts.message')}</Form.Label>
                     <Form.Control
                         aria-describedby="inputGroupPrepend"
                         id="message"
                         as="textarea"
                         type="text"
-                        placeholder="message"
+                        placeholder={t('contacts.messagePlaceholder')}
                         {...formik.getFieldProps('message')}
                         isInvalid={formik.touched.message && !!formik.errors.message}
                         isValid={formik.touched.message && !formik.errors.message}
@@ -103,7 +109,7 @@ export default function FormToSend() {
                 </Form.Group>
 
 
-                <Button type="submit">Submit form</Button>
+                <Button className="btn" block type="submit">{t('contacts.submit')}</Button>
             </form>
         </>
     );
