@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "0adcf8447c62a01c2b712b7251482292",
+    "revision": "339d2a48aa1ef55878fe4b0ab478599c",
     "url": "/n-borei/index.html"
   },
   {
-    "revision": "45d4d673568c1ba6936d",
+    "revision": "8e55f6cfdbd605a45025",
     "url": "/n-borei/static/css/2.69121389.chunk.css"
   },
   {
-    "revision": "23a74fecf50b615a2e64",
-    "url": "/n-borei/static/css/main.c9a39aa5.chunk.css"
+    "revision": "178950306815e3f83474",
+    "url": "/n-borei/static/css/main.4a91c758.chunk.css"
   },
   {
-    "revision": "45d4d673568c1ba6936d",
-    "url": "/n-borei/static/js/2.8b561c9f.chunk.js"
+    "revision": "8e55f6cfdbd605a45025",
+    "url": "/n-borei/static/js/2.63b9877d.chunk.js"
   },
   {
     "revision": "3453b8997016469371284a28c0e873e2",
-    "url": "/n-borei/static/js/2.8b561c9f.chunk.js.LICENSE.txt"
+    "url": "/n-borei/static/js/2.63b9877d.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "23a74fecf50b615a2e64",
-    "url": "/n-borei/static/js/main.3fe4cdaf.chunk.js"
+    "revision": "178950306815e3f83474",
+    "url": "/n-borei/static/js/main.4d030fa3.chunk.js"
   },
   {
     "revision": "c4f693ce8d186e1e75fa",
@@ -352,8 +352,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/n-borei/static/media/bracelets_title.58649a16.png"
   },
   {
-    "revision": "2e46f8bcf61221f6d0cd2226e90b2222",
-    "url": "/n-borei/static/media/brooch_title.2e46f8bc.png"
+    "revision": "42dc98fee28196e35b15f1fd65ba602f",
+    "url": "/n-borei/static/media/brooch_title.42dc98fe.png"
   },
   {
     "revision": "55af9bc0e2048f24c7030c5ce7246648",
@@ -370,6 +370,14 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "238e276e7b08abb3da014df64effba48",
     "url": "/n-borei/static/media/materials.238e276e.jpg"
+  },
+  {
+    "revision": "e89a52a593a67813b3af70581516602b",
+    "url": "/n-borei/static/media/necklace_title.e89a52a5.png"
+  },
+  {
+    "revision": "d25880ce7ba594c635fbf0cf9dd8ef8e",
+    "url": "/n-borei/static/media/pendant_title.d25880ce.png"
   },
   {
     "revision": "df6a40f1c2081c4a9e442d80852db888",
