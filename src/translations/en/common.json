@@ -3,15 +3,20 @@
         "home": "Home",
         "about": "About",
         "shop": "Shop",
+        "collections": "Collections",
         "orderShip": "Order & Shipping",
-        "contacts": "Contacts"
+        "contacts": "Contacts",
+        "en": "en",
+        "ru": "ru"
     },
     "categories": {
         "brooch": "Brooch",
         "bracelets": "Bracelets",
         "rings": "Rings",
         "bags": "Bags",
-        "lavBrooch": "Lavalier brooch"
+        "lavBrooch": "Lavalier brooch",
+        "pendant": "Pendant",
+        "necklace": "Necklace"
     },
     "common": {
         "notFound": "No Results Found",
@@ -29,6 +34,8 @@
         "titleAdress": "Adress:",
         "titleEmail": "Email Us",
         "messengers": "Messengers:",
+        "topic": "Topic:",
+        "topicPlaceholder": "Enter your topic",
         "name": "Name:",
         "namePlaceholder": "Enter your name",
         "email": "Email:",

@@ -13,7 +13,10 @@ import ShowItem from './components/Shop/ShowItem/ShowItem';
 import Contacts from './components/Contacts/Contacts';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
-const filters = ["Lavalier brooch", "Brooch", "Rings", "Bracelets", "Bags"]
+const filters = ["Necklace","Lavalier brooch", "Pendant", "Brooch", "Rings", "Bracelets", "Bags"]
+
+
+
 
 function App() {
 

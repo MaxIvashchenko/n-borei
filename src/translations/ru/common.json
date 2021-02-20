@@ -3,15 +3,20 @@
         "home": "На главную",
         "about" : "Об авторе",
         "shop" : "Магазин",
+        "collections": "Коллекции",
         "orderShip" : "Заказ и Доставка",
-        "contacts" : "Контакты"
+        "contacts" : "Контакты",
+        "en": "англ.",
+        "ru": "рус."
     },
     "categories": {
-        "brooch": "Брошки",
+        "brooch": "Брошь",
         "bracelets": "Браслеты",
         "rings": "Кольца",
         "bags": "Сумки",
-        "lavBrooch": "Подвески"
+        "lavBrooch": "Брошь-кулон",
+        "pendant": "Кулон",
+        "necklace": "Колье"
     },
     "footer": {
         "contactUs": "Связаться с нами",
@@ -24,6 +29,8 @@
         "titleAdress": "Адресс:",
         "titleEmail": "Написать Нам",
         "messengers": "Мессенджеры:",
+        "topic": "Тема Письма:",
+        "topicPlaceholder": "Введите тему письма",
         "name": "Имя:",
         "namePlaceholder": "Введите свое имя",
         "email": "Почта:",

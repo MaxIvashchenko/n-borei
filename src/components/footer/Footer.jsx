@@ -2,15 +2,16 @@ import React from 'react'
 import { useTranslation } from "react-i18next";
 import shortLogo from '../../images/shortLogo.png'
 import { Link } from "react-router-dom";
-import {email, adress, phone} from "../../infoData/contacts";
+import { email, adress, phone } from "../../infoData/contacts";
+
+const links = {
+    facebook: "https://www.facebook.com/Nataly.la.perla/",
+    instagram: "https://www.instagram.com/accounts/login/?next=%2Fbeads__line%2F&source=follow",
+}
 
 export default function Footer({ mainPage }) {
     const { t } = useTranslation('common');
-    const links = {
-        facebook: "https://www.facebook.com/Nataly.la.perla/",
-        instagram: "https://www.instagram.com/accounts/login/?next=%2Fbeads__line%2F&source=follow",
 
-    }
     return (
         <footer className="Footer"  >
             <div className="container">

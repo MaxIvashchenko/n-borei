@@ -9,12 +9,12 @@ export const items = [
 			"items/Lavalierbrooch/LotusKeepSilent/LotusKeepSilent__3.jpg"
 		],
 		ru: {
-			name: "Почему Лотус молчит?",
+			name: "Лотос",
 			description: "Описание на русском",
 			material: "Состоит из кристаллов и жемчуга Сваровски, японского бисера, кожаных переплетов.",
 		},
 		en: {
-			name: "Why lotus keeps silent?",
+			name: "Lotus",
 			description: "Lotus petals are getting closed at night and going back down into the cloudy pond water, with the sunrise to come they are going up opened and getting back again in bright colors. Lotus is a symbol of virgin beauty and eternal rebirth.",
 			material: "Consists of crystals and pearls Swarovski, Japanese beads, leather binders.",
 		},
@@ -69,7 +69,7 @@ export const items = [
 	},
 	{
 		id: "LB004",
-		title: "Lavalier brooch",
+		title: "Pendant", 
 		ru: {
 			name: "Цветок Мандрагоры",
 			description: "The philosophers’ stone amid the Globe flora, mystical and enigmatical. Is there a way to obtain eternal youth and immortality, to have a welfare and wealth, to enjoy supernatural capabilities and real love? This is what the story of beads wickerwork narrates about the magical flower. Lavaliere is made by technique of embroidery and multilayer beads wickerwork.",
@@ -91,7 +91,7 @@ export const items = [
 	},
 	{
 		id: "LB005",
-		title: "Lavalier brooch",
+		title: "Necklace",
 		ru: {
 			name: "Кулон Молекула",
 			description: "Кулон, как каркас уникальна и неповторима, рождая что-то новое. Потоки жемчуга переливаются в пятидесяти серых оттенках. Изделие изготовлено в технике вышивки и плетения бусинами.",
@@ -111,7 +111,7 @@ export const items = [
 	},
 	{
 		id: "LB006",
-		title: "Lavalier brooch",
+		title: "Necklace",
 		ru: {
 			name: "Timeless Wind",
 			description: "Время похоже на энергию преобразования и созидания. Он заставляет звезды сиять и расширяется в пространстве. Время идет вечно. The article is made by technique of embroidery and beads wickerwork.",
@@ -133,7 +133,7 @@ export const items = [
 	},
 	{
 		id: "LB007",
-		title: "Lavalier brooch",
+		title: "Necklace",
 		ru: {
 			name: "Всплеск",
 			description: "This is a feast of violet colors full of joy and light. The article is made by technique of embroidery and beads wickerwork.",
@@ -177,7 +177,7 @@ export const items = [
 	},
 	{
 		id: "LB009",
-		title: "Lavalier brooch",
+		title: "Necklace",
 		ru: {
 			name: "Butterfly",
 			description: "This is a shining festivity of Swarovski crystals. You can hardly go unnoticed. The lavaliere has an asymmetric shape. The article is made by technique of embroidery and beads wickerwork.",
@@ -220,7 +220,7 @@ export const items = [
 		available: "available"
 	},
 	{
-		title: "Lavalier brooch",
+		title: "Pendant",
 		ru: {
 			name: "Эделвейс",
 			description: "Коллекция “Flowers come to life from stones”. Reaching to the stars through the thorns, cherishing delicate dreams and looking for the right way to achieve the hope the flowers come to life from stones. The lavaliere is made by technique of multilayer beads wickerwork and beads embroidery.",
@@ -241,12 +241,11 @@ export const items = [
 	},
 	{
 		id: "LB013",
-		title: "Lavalier brooch",
+		title: "Necklace",
 		ru: {
 			name: "Secret Garden",
 			description: "At the marvelous moment, when the angels sleep, let space and time be powerless. I'll fly to a mysterious garden throwing away everything earthly, like a burden.",
 			material: "Натуральный камень, кристаллы и жемчуг Сваровски, японский бисер, металлическая вставка.",
-
 		},
 		en: {
 			name: "Secret Garden",

@@ -14,7 +14,7 @@ const socLink = {
     }
 }
 
-const email = "beadsline@gmail.com";
+const email = "boreinatali@gmail.com";
 const phone = "+38 (095) 324 0 777";
 const adress = 'footer.adress'
 

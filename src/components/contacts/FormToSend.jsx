@@ -10,6 +10,7 @@ export default function FormToSend() {
     const { t } = useTranslation('common');
 
     const initialValues = {
+        topic: '',
         name: '',
         email: '',
         phone: '',
@@ -20,6 +21,10 @@ export default function FormToSend() {
     const formik = useFormik({
         initialValues,
         validationSchema: Yup.object({
+            topic: Yup.string()
+                .min(8, t('contacts.numberMore'))
+                .max(50, t('contacts.lessChar'))
+                .required(t('contacts.required')),
             name: Yup.string()
                 .min(2, t('contacts.moreChar'))
                 .max(50, t('contacts.lessChar'))
@@ -32,8 +37,8 @@ export default function FormToSend() {
                 .min(8, t('contacts.numberMore'))
                 .max(20, t('contacts.numberLess')),
             message: Yup.string()
-            .min(9, t('contacts.messageMore'))
-            .required(t('contacts.required')),
+                .min(9, t('contacts.messageMore'))
+                .required(t('contacts.required')),
         }),
         onSubmit: values => {
 
@@ -44,6 +49,20 @@ export default function FormToSend() {
     return (
         <>
             <form onSubmit={formik.handleSubmit}>
+                <Form.Group>
+                    <Form.Label>{t('contacts.topic')}</Form.Label>
+                    <Form.Control
+                        id="topic"
+                        type="text"
+                        placeholder={t('contacts.topicPlaceholder')}
+                        {...formik.getFieldProps('topic')}
+                        isInvalid={formik.touched.topic && !!formik.errors.topic}
+                        isValid={formik.touched.topic && !formik.errors.topic}
+                    />
+                    <Form.Control.Feedback type="invalid">
+                        {formik.errors.topic}
+                    </Form.Control.Feedback>
+                </Form.Group>
                 <Form.Group>
                     <Form.Label>{t('contacts.name')}</Form.Label>
                     <Form.Control
