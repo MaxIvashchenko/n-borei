@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/n-borei/static/css/main.4a91c758.chunk.css",
-    "main.js": "/n-borei/static/js/main.ac08ce95.chunk.js",
-    "main.js.map": "/n-borei/static/js/main.ac08ce95.chunk.js.map",
+    "main.js": "/n-borei/static/js/main.cdf986c9.chunk.js",
+    "main.js.map": "/n-borei/static/js/main.cdf986c9.chunk.js.map",
     "runtime-main.js": "/n-borei/static/js/runtime-main.da1f064b.js",
     "runtime-main.js.map": "/n-borei/static/js/runtime-main.da1f064b.js.map",
     "static/css/2.69121389.chunk.css": "/n-borei/static/css/2.69121389.chunk.css",
     "static/js/2.63b9877d.chunk.js": "/n-borei/static/js/2.63b9877d.chunk.js",
     "static/js/2.63b9877d.chunk.js.map": "/n-borei/static/js/2.63b9877d.chunk.js.map",
     "index.html": "/n-borei/index.html",
-    "precache-manifest.cbd571d01bc11fbcc10ab441aa7d3c95.js": "/n-borei/precache-manifest.cbd571d01bc11fbcc10ab441aa7d3c95.js",
+    "precache-manifest.056eacdca43dd1961bb2b973b440e372.js": "/n-borei/precache-manifest.056eacdca43dd1961bb2b973b440e372.js",
     "service-worker.js": "/n-borei/service-worker.js",
     "static/css/2.69121389.chunk.css.map": "/n-borei/static/css/2.69121389.chunk.css.map",
     "static/css/main.4a91c758.chunk.css.map": "/n-borei/static/css/main.4a91c758.chunk.css.map",
@@ -98,6 +98,6 @@
     "static/css/2.69121389.chunk.css",
     "static/js/2.63b9877d.chunk.js",
     "static/css/main.4a91c758.chunk.css",
-    "static/js/main.ac08ce95.chunk.js"
+    "static/js/main.cdf986c9.chunk.js"
   ]
 }
