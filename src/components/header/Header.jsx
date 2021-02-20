@@ -11,7 +11,7 @@ import useWindowWidth from "../../hooks/useWindowWidth"
 export default function Header({ mainPage }) {
     const { t, i18n } = useTranslation('common');
     const [width] = useWindowWidth();
-    console.log(width)
+
     const mobWidth = width < 992;
 
     return (
