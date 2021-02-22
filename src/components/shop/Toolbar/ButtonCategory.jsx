@@ -10,7 +10,6 @@ export default function ButtonCategory({ filter, i, showText }) {
 
     return (
         <Link
-            key={filter + ' ' + i}
             className={titleToUrl(filter) === title ? "filter-selected category-name" : "unselected category-name"}
             to={`/shop/${titleToUrl(filter)}`}>
             <Animated animationIn="bounceInRight" animationOut="fadeOut" >
