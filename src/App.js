@@ -11,6 +11,7 @@ import OrderAndShipment from './components/OrderAndShipment/OrderAndShipment';
 import Shop from './components/Shop/Shop';
 import ShowItem from './components/Shop/ShowItem/ShowItem';
 import Contacts from './components/Contacts/Contacts';
+import Collections from './components/Collections/Collections';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 const filters = ["Necklace", "Lavalier brooch", "Pendant", "Brooch", "Rings", "Bracelets", "Bags"]
@@ -28,7 +29,6 @@ function App() {
 
           <Route exact onlyActiveOnIndex={true} path="/shop/:title">
             <Shop
-              // getSelected={setshopPage}
               filters={filters}
               items={items}
             />
@@ -37,6 +37,7 @@ function App() {
 
           <Route exact path="/about" component={AboutAuthor} />
           <Route exact path="/order" component={OrderAndShipment} />
+          <Route exact path="/collections" component={Collections} />
           <Route exact path="/contacts" component={Contacts} />
           <Route path="/shop/:title/:name" component={ShowItem} />
 

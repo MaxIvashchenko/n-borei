@@ -1,4 +1,5 @@
 import React from 'react'
+import { Nav } from 'react-bootstrap';
 import { useTranslation } from "react-i18next";
 import SocialLink from '../Common/SocialLink'
 import { socLink } from "../../infoData/contacts"
@@ -7,8 +8,8 @@ export default function OrderAndShipment() {
     const { t } = useTranslation('common');
 
     return (
-        <div className="container">
-            <div className="Order row justify-content-around">
+        <div className="Order container">
+            <div className=" row justify-content-around">
                 <div className="col-8">
                     <h2>{t('orderAndShipment.title1')}</h2>
                     <p>{t('orderAndShipment.toGetOrder')}</p>
@@ -20,6 +21,15 @@ export default function OrderAndShipment() {
                     <h2>{t('orderAndShipment.shipment')}</h2>
                     <p>{t('orderAndShipment.shipmentDesc')}</p>
                 </div>
+{/* 
+                <Nav variant="tabs" defaultActiveKey="/home">
+                    <Nav.Item>
+                        <Nav.Link  eventKey="link-1">Active</Nav.Link>
+                    </Nav.Item>
+                    <Nav.Item>
+                        <Nav.Link eventKey="link-2">Option 2</Nav.Link>
+                    </Nav.Item>
+                </Nav> */}
             </div>
         </div>
     )
