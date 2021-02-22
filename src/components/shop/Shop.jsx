@@ -1,12 +1,15 @@
 import React, { useState } from 'react'
+import { useParams } from "react-router-dom";
 import Toolbar from './Toolbar/Toolbar';
 import ItemList from './ItemList/ItemList';
 import FilterSettings from './Toolbar/FilterSettings';
 import { Animated } from 'react-animated-css'
-
-export default function Shop({ items, getSelected, selected, filters }) {
+import titleToUrl from "../../helper/helper"
+export default function Shop({ items, filters }) {
     const [selectedAvailable, setSelectedAvailable] = useState('all');
     const [selectedPrice, setSelectedPrice] = useState('');
+    const { title } = useParams();
+    const selected = title;
 
     const sortByPrice = (a, b) => {
         switch (selectedPrice) {
@@ -19,22 +22,18 @@ export default function Shop({ items, getSelected, selected, filters }) {
         }
     }
     const filterByAvailability = (item) => selectedAvailable === 'all' ? item : item.available === 'available';
-    const filterBySelection = item => item.title.split(' ').join('') === selected
+    const filterBySelection = ({ title }) => titleToUrl(title) === selected;
     const showItems = items
         .filter(filterBySelection)
         .filter(filterByAvailability)
-        .sort(sortByPrice)
+        .sort(sortByPrice);
 
     return (
         <>
-            <section className="container-fluid Shop"   >
-                <div className="row " >
-                    <aside className="col-12 col-md-3 nav-shop" >
-                        <Toolbar
-                            filters={filters}
-                            selected={selected}
-                            onSelectFilter={getSelected}
-                        />
+            <section className="container-fluid Shop">
+                <div className="row">
+                    <aside className="col-12 col-md-3 nav-shop">
+                        <Toolbar filters={filters} />
                     </aside>
 
                     <div className="col-12 col-md-9">
@@ -46,7 +45,6 @@ export default function Shop({ items, getSelected, selected, filters }) {
                                 selectedPrice={selectedPrice}
                             />
                             :
-
                             <Animated className="noFilter" animationIn="bounceInRight" animationOut="fadeOut" />
                         }
                         <div className="row">

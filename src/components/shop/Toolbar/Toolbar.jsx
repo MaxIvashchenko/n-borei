@@ -1,32 +1,10 @@
 import React from 'react'
-import { useTranslation } from "react-i18next";
-import { Animated } from 'react-animated-css'
+import ButtonCategory from './ButtonCategory';
 
+function Toolbar({ filters }) {
+    const showText = (text) => text === "Lavalier brooch" ? "lavBrooch" : text.toLowerCase();
 
-export default function Toolbar(props) {
-    const { filters, selected, onSelectFilter } = props;
-    const { t } = useTranslation('common');
+    return filters.map((filter, i) => <ButtonCategory filter={filter} i={i} showText={showText} />)                       
+};
 
-    const showText = (text) => text === "Lavalier brooch" ? "lavBrooch" : text.toLowerCase()
-
-    return (
-        <>
-            {filters.map((filter, i) => {
-                return (
-
-                    <button
-                        className={filter.split(' ').join('') === selected ? "filter-selected category-name" : "unselected category-name"}
-                        onClick={() => onSelectFilter(filter.split(' ').join(''))}
-                        key={i}>
-                        <span>
-                            <Animated animationIn="bounceInRight" animationOut="fadeOut" >
-                                {t(`categories.${showText(filter)}`)}
-                            </Animated>
-                        </span>
-                    </button>
-                )
-            }
-            )}
-        </>
-    );
-}
+export default Toolbar;

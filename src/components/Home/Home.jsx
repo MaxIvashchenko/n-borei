@@ -16,12 +16,12 @@ const categories = [
     { name: 'bracelets', sizeClass: 'col-md-5', imgSrc: bracelet, text: 'Bracelets' },
     { name: 'rings', sizeClass: 'col-md-3', imgSrc: ring, text: 'Rings' },
     { name: 'bags', sizeClass: 'col-md-3', imgSrc: bag, text: 'Bags' },
-    { name: 'lavBrooch', sizeClass: 'col-md-6', imgSrc: lavBrooch, text: 'Lavalier brooch' },
+    { name: 'lavBrooch', sizeClass: 'col-md-6', imgSrc: lavBrooch, text: 'Lavalierbrooch' },
     { name: 'pendant', sizeClass: 'col-md-5', imgSrc: pendant, text: 'Pendant' },
     { name: 'necklace', sizeClass: 'col-md-7', imgSrc: necklace, text: 'Necklace' },
 ]
 
-function Home({ getSelected }) {
+function Home() {
     const [t] = useTranslation('common');
 
     return (
@@ -31,17 +31,17 @@ function Home({ getSelected }) {
                 <div className="row categoryShop">
 
                     {categories.map((category, i) => {
+                        const { text, sizeClass, name, imgSrc } = category;
+
                         return (
-                            <button key={i} onClick={() => getSelected(category.text.split(' ').join(''))} className={'col-12 ' + category.sizeClass}>
-                                <Link to={'/shop'}>
-                                    <div className={category.name}>
+                            <Link key={i} to={`/shop/${text.toLowerCase()}`} className={'col-12 ' + sizeClass}>
+                                <div className={name}>
 
-                                        <img src={category.imgSrc} alt={category.name + '_title'} />
-                                        <h3>{t(`categories.${category.name}`)}</h3>
+                                    <img src={imgSrc} alt={name + '_title'} />
+                                    <h3>{t(`categories.${name}`)}</h3>
 
-                                    </div>
-                                </Link>
-                            </button>
+                                </div>
+                            </Link>
                         )
                     })}
 

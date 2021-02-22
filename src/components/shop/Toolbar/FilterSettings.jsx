@@ -16,7 +16,7 @@ export default function FilterSettings({ filterShowAvailable, filterSortPrice, s
             {filterSettings.map((buttonName, i) =>
                 <li className="nav-item" key={i + " " + buttonName}>
                     <button
-                        onClick={e => filterShowAvailable(buttonName)}
+                        onClick={() => filterShowAvailable(buttonName)}
                         className={selectedNav(buttonName, selectedAvailable)}
                     >
                         {t(`shop.filter.${buttonName.replace(/\s/g, '')}`)}
@@ -32,7 +32,7 @@ export default function FilterSettings({ filterShowAvailable, filterSortPrice, s
                 <li className="nav-item" key={i + " " + buttonName}>
                     <button
                         className={selectedNav(buttonName, selectedPrice)}
-                        onClick={e => filterSortPrice(buttonName)}
+                        onClick={() => filterSortPrice(buttonName)}
                     >
                         {t(`shop.filter.${showPriceFil(buttonName)}`)}
                     </button>

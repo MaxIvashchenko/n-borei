@@ -41,7 +41,7 @@ export default function Header({ mainPage }) {
                 <div className="collapse navbar-collapse " id="navbarNavAltMarkup" style={{ textAlign: "center", padding: "20px 0" }}>
                     <div className="navbar-nav menu-btn navbar-left">
                         <NavItem href="/about" text={t('header.about')} />
-                        <NavItem href="/shop" text={t('header.shop')} />
+                        <NavItem href="/shop/Necklace" text={t('header.shop')} />
                         <NavItem href="/collections" text={t('header.collections')} />
                     </div>
 

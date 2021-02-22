@@ -1,9 +1,9 @@
 .NotFound {
     padding: 0% 10% 10%;
     font-family: $basicFont;
-    a {
-        text-decoration: none; 
-    }
+    text-align: center;
+    
+
     p {
         text-align: center;
         font-size: 60px;
@@ -49,4 +49,8 @@
             color: $gold-green;
         }
     }
+    .homeBtn:active,
+    .homeBtn:focus {
+        outline: none;
+    } 
 }

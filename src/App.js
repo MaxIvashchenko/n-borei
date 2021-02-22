@@ -1,7 +1,7 @@
-import React, { useState,Suspense } from 'react';
+import React, {  Suspense } from 'react';
 import './App.scss';
 import { items } from './data'
-import {ScrollToTop,NotFound} from './components/Common/index'
+import { ScrollToTop, NotFound } from './components/Common/index'
 
 import Header from './components/Header/Header';
 import Home from './components/Home/Home';
@@ -13,15 +13,9 @@ import ShowItem from './components/Shop/ShowItem/ShowItem';
 import Contacts from './components/Contacts/Contacts';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
-const filters = ["Necklace","Lavalier brooch", "Pendant", "Brooch", "Rings", "Bracelets", "Bags"]
-
-
-
+const filters = ["Necklace", "Lavalier brooch", "Pendant", "Brooch", "Rings", "Bracelets", "Bags"]
 
 function App() {
-
-  const [shopPage, setshopPage] = useState("Lavalierbrooch")
-
   const mainPage = '/'
 
   return (
@@ -32,17 +26,14 @@ function App() {
         <Header mainPage={mainPage} />
         <Switch>
 
-          <Route exact onlyActiveOnIndex={true} path="/shop">
+          <Route exact onlyActiveOnIndex={true} path="/shop/:title">
             <Shop
-              getSelected={setshopPage}
+              // getSelected={setshopPage}
               filters={filters}
-              selected={shopPage}
               items={items}
             />
           </Route>
-          <Route exact path={mainPage}>
-            <Home getSelected={setshopPage} />
-          </Route>
+          <Route exact path={mainPage} component={Home} />
 
           <Route exact path="/about" component={AboutAuthor} />
           <Route exact path="/order" component={OrderAndShipment} />

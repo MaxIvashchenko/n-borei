@@ -1,9 +1,9 @@
 import React from 'react'
 import { useTranslation } from "react-i18next";
 import CardImage from './CardImage';
-import { Animated } from 'react-animated-css'
+// import { Animated } from 'react-animated-css'
 import { Link } from 'react-router-dom'
-
+import titleToUrl from "../../../helper/helper"
 
 export default function ItemList({ items }) {
     const { t, i18n } = useTranslation('common');
@@ -12,12 +12,11 @@ export default function ItemList({ items }) {
     const arrayMin = (arr) => arr.reduce((p, v) => (p.price < v.price ? p : v));
 
     const itemList = items.map(function (item, i) {
-
-        const path = `shop/${item.title}/${item.name}`
+        const path = `/shop/${item.title}/${item.en.name}`
         const showItem = () => {
             if (item.variants) {
 
-                const startPrice = arrayMin(item.variants).price
+                const { price } = arrayMin(item.variants)
                 const isAvailable = item.variants.some(a => a.available === 'available')
                 const status = isAvailable ? "available" : "sold";
 
@@ -25,7 +24,7 @@ export default function ItemList({ items }) {
                 const priceStatus = () => <li className={`item-status ${status}`}>{t(`shop.filter.${status}`)}</li>
 
                 item.available = status
-                item.price = startPrice
+
                 return (
                     <>
                         <div className="col-12 ">
@@ -39,7 +38,7 @@ export default function ItemList({ items }) {
 
                         <ul className="col-12 priceStatus">
                             {priceStatus()}
-                            <li className="item-price  ">{t(`shop.filter.from`)} {startPrice} €</li>
+                            <li className="item-price  ">{t(`shop.filter.from`)} {price} €</li>
                         </ul>
                     </>
                 )
@@ -63,13 +62,13 @@ export default function ItemList({ items }) {
 
 
         return (
-            <Link to={{ pathname: path.split(' ').join(''), state: { item } }}
+            <Link to={{ pathname: titleToUrl(path), state: { item } }}
                 className="items container col-6 col-sm-6 col-lg-4" key={i}>
-                <Animated animationIn="bounceInRight" animationOut="fadeOut" className="item-card">
+                <div className="item-card">
                     <div className="content row">
                         {showItem()}
                     </div>
-                </Animated>
+                </div>
             </Link>
         )
     })

@@ -1,9 +1,12 @@
 import React from 'react'
 import { useTranslation } from "react-i18next";
-import { Link } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
-export default function NotFound({mainPage}) {
+
+export default function NotFound({ mainPage }) {
     const [t] = useTranslation('common');
+    const history = useHistory();
+    const toMainPage = () => history.push("/");
 
     return (
         <div className='NotFound'>
@@ -13,13 +16,11 @@ export default function NotFound({mainPage}) {
             <p className='text'>{t('common.text')}</p>
 
 
-            <Link to={mainPage}>
-                <div className="homeBtn">
+            <button className="homeBtn" to={mainPage} onClick={toMainPage}>
+                <div>
                     <p>{t('common.back')}</p>
                 </div>
-            </Link>
-
-
+            </button>
         </div>
     )
 }

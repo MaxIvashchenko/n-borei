@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
 import { useTranslation } from "react-i18next";
 import { Animated } from 'react-animated-css'
-import { Link } from 'react-router-dom'
+
+import { useHistory } from 'react-router-dom'
 import backImg from '../../../images/back.svg'
 import FewItems from './FewItems'
 import NotFound from '../../Common/NotFound'
@@ -9,6 +10,7 @@ import NotFound from '../../Common/NotFound'
 export default function Item(props) {
     const { t, i18n } = useTranslation('common');
     const lang = i18n.language;
+    const history = useHistory();
     const [numOfImg, setnumOfImg] = useState(0)
     if (!props.location.state) return <NotFound />
     const item = props.location.state.item
@@ -16,13 +18,11 @@ export default function Item(props) {
     return (
         <Animated animationInDuration={1000} animationIn="fadeIn" className="ShowItem">
             <div className="container-fluid">
-                <Link className="backImg" to='/shop'>
+                <button className="backImg" onClick={()=>history.goBack()}>
                     <img src={backImg} alt="back-icon" />
-                </Link>
+                </button>
                 {item.variants ? <FewItems numOfImg={numOfImg} setnumOfImg={setnumOfImg} item={item} /> :
                     <>
-
-
                         <div className="row">
                             <div className="col-12 col-md-6 textBlock">
 
@@ -49,8 +49,6 @@ export default function Item(props) {
                                 <h5>{item.dimensions} {t(`shop.filter.dimension`)}</h5>
 
                             </div>
-
-
 
                             <div className="col-12 col-md-6 imageBlock">
                                 <img
