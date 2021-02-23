@@ -30,6 +30,17 @@
         "phone": "Phone:",
         "email": "Email:"
     },
+    "order": {
+        "payment": "Payment",
+        "delivery": "Delivery",
+        "forUkraine": "For Ukraine",
+        "forCIS": "For CIS",
+        "forEurope": "For Europe",
+        "": "",
+        "": "",
+        "": "",
+        "": ""
+    },
     "contacts": {
         "titleAdress": "Adress:",
         "titleEmail": "Email Us",

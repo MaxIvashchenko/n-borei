@@ -1,39 +1,26 @@
 .Order {
-    margin: 7% auto;
-    border-radius: 10px;
-    background: #cdc28a;
-    opacity: 0.9;
+    margin: 2% auto;
+    color: $brown;
+    font: 20px $basicFont;
+    padding: 30px;
 
-    text-align: center;
-    padding: 30px 0 40px;
-
-    font-size: 20px ;
-    font-family: $gold-green;
-    
-    h2 {
-        text-align: center;
-    }
-    p {
-        padding: 0 10%;
-    }
-    i {
-        font-size: 60px;
-        color: #7a5940;
-        padding: 20px;
+    h3 {
+        padding: 20px 0;
     }
 
-    i:hover {
-        -webkit-transform: scale(1.2);
-        -ms-transform: scale(1.2);
-        transform: scale(1.2);
+    .line {
+        border-top: 1px solid $brown;
+        opacity: 0.3;
     }
-    #tooltip-top > .tooltip-inner {
-        background-color: #7a5940;
-        color: white;
-        border: 1px solid #7a5940;
-        opacity: 0.5;
-    }
-    #tooltip-top > .tooltip-arrow {
-        border-top: 5px solid #7a5940;
+    .tabs {
+        
+        p {
+
+            border-left: 1px solid rgb(222, 226, 230);
+            border-right: 1px solid rgb(222, 226, 230);
+            border-bottom: 1px solid rgb(222, 226, 230);
+            
+            padding: 20px;
+        }
     }
 }
