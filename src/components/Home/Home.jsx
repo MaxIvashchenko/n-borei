@@ -10,6 +10,7 @@ import bag from '../../images/main/bags_title.png'
 import brooch from '../../images/main/brooch_title.png'
 import lavBrooch from '../../images/main/lavBrooch_title.png'
 import ring from '../../images/main/rings_title.png'
+import stick from '../../images/stick.png'
 
 const categories = [
     { name: 'brooch', sizeClass: 'col-md-7', imgSrc: brooch, text: 'Brooch' },
@@ -36,10 +37,12 @@ function Home() {
                         return (
                             <Link key={i} to={`/shop/${text.toLowerCase()}`} className={'col-12 ' + sizeClass}>
                                 <div className={name}>
+                     
 
-                                    <img src={imgSrc} alt={name + '_title'} />
+                                    <img className="cover" src={imgSrc} alt={name + '_title'} />
                                     <h3>{t(`categories.${name}`)}</h3>
-
+                                    {/* <img src={stick} alt='srick' className="stick1"/> */}
+                                    <img src={stick} alt='stick' className="stick2"/>
                                 </div>
                             </Link>
                         )
