@@ -13,7 +13,7 @@ export default function Footer({ mainPage }) {
     const { t } = useTranslation('common');
 
     return (
-        <footer className="Footer"  >
+        <footer className="Footer">
             <div className="container">
                 <div className="row">
                     <div className="col-12 col-md-4 footerContacts">

@@ -1,0 +1,10 @@
+export {default as Home} from './Home/Home'
+export {default as AboutAuthor} from './AboutAuthor/AboutAuthor'
+export {default as OrderAndShipment} from './OrderAndShipment/OrderAndShipment'
+export {default as Shop} from './Shop/Shop'
+export {default as ShowItem} from './Shop/ShowItem/ShowItem'
+export {default as Contacts} from './Contacts/Contacts'
+export {default as Collections} from './Collections/Collections'
+
+export {default as Header} from './Header/Header'
+export {default as Footer} from './Footer/Footer'

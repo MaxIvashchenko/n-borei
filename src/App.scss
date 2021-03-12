@@ -1,6 +1,16 @@
 $gold-green: #b1a671;
 $brown: #7a5940;
-$gold: #b7914c;
+$gold: hsl(39, 43%, 51%);
+
+#root {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+    .Layout {
+        flex-grow: 1;
+    }
+}
 
 .variants {
     padding: 10px;
@@ -60,7 +70,6 @@ $gold: #b7914c;
     .green {
         background: rgb(9, 116, 17);
     }
-
 }
 
 @media only screen and (max-width: 768px) {

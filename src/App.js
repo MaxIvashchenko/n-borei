@@ -1,20 +1,13 @@
-import React, {  Suspense } from 'react';
+import React, { Suspense } from 'react';
 import './App.scss';
 import { items } from './data'
-import { ScrollToTop, NotFound } from './components/Common/index'
 
-import Header from './components/Header/Header';
-import Home from './components/Home/Home';
-import AboutAuthor from './components/AboutAuthor/AboutAuthor';
-import Footer from './components/Footer/Footer';
-import OrderAndShipment from './components/OrderAndShipment/OrderAndShipment';
-import Shop from './components/Shop/Shop';
-import ShowItem from './components/Shop/ShowItem/ShowItem';
-import Contacts from './components/Contacts/Contacts';
-import Collections from './components/Collections/Collections';
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
-const filters = ["Necklace", "Lavalier brooch", "Pendant", "Brooch", "Rings", "Bracelets", "Bags"]
+import { Header, Footer } from './components';
+import Layout from './components/Layout';
+
+import { BrowserRouter as Router } from "react-router-dom";
+
 
 function App() {
   const mainPage = '/'
@@ -25,28 +18,9 @@ function App() {
     >
       <Suspense fallback="loading">
         <Header mainPage={mainPage} />
-        <Switch>
 
-          <Route exact onlyActiveOnIndex={true} path="/shop/:title">
-            <Shop
-              filters={filters}
-              items={items}
-            />
-          </Route>
-          <Route exact path={mainPage} component={Home} />
-
-          <Route exact path="/about" component={AboutAuthor} />
-          <Route exact path="/order" component={OrderAndShipment} />
-          <Route exact path="/collections" component={Collections} />
-          <Route exact path="/contacts" component={Contacts} />
-          <Route path="/shop/:title/:name" component={ShowItem} />
-
-          <Route exact path="/*" >
-            <NotFound mainPage={mainPage} />
-          </Route>
-
-        </Switch>
-        <ScrollToTop />
+        <Layout items={items} mainPage={mainPage} />
+        {/* <ScrollToTop /> */}
 
         <Footer mainPage={mainPage} />
       </Suspense>

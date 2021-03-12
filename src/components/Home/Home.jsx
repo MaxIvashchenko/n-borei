@@ -16,8 +16,8 @@ const categories = [
     { name: 'brooch', sizeClass: 'col-md-7', imgSrc: brooch, text: 'Brooch' },
     { name: 'bracelets', sizeClass: 'col-md-5', imgSrc: bracelet, text: 'Bracelets' },
     { name: 'rings', sizeClass: 'col-md-3', imgSrc: ring, text: 'Rings' },
-    { name: 'bags', sizeClass: 'col-md-3', imgSrc: bag, text: 'Bags' },
     { name: 'lavBrooch', sizeClass: 'col-md-6', imgSrc: lavBrooch, text: 'Lavalierbrooch' },
+    { name: 'bags', sizeClass: 'col-md-3', imgSrc: bag, text: 'Bags' },
     { name: 'pendant', sizeClass: 'col-md-5', imgSrc: pendant, text: 'Pendant' },
     { name: 'necklace', sizeClass: 'col-md-7', imgSrc: necklace, text: 'Necklace' },
 ]
