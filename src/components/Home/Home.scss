@@ -20,23 +20,27 @@
             }
             .stick1 {
                 position: absolute;
-                top: 15%;
-                transform: rotate(200deg);
-                width: 120px;
+                top: 20%;
+                transform: rotate(190deg);
+                width: 100px;
                 opacity: 1;
                 transition: all 0.8s ease-out;
             }
             .stick2 {
                 position: absolute;
                 top: 42%;
-                width: 120px;
+                width: 100px;
                 transform: rotate(20deg);
                 opacity: 1;
                 transition: all 0.8s ease-out;
             }
         }
         a div:hover{
-            .stick1,
+            .stick1 {
+                transform: rotate(200deg) scale(1.1);
+                top: 15%;
+
+            }
             .stick2 {
                 opacity: 0;
             }
@@ -69,7 +73,9 @@
         .brooch:hover {
             // overflow: visible;
             transition: all 1s ease-out;
-            
+            .stick1 {
+                right: 48%;
+            }
             .cover {
                 top: -50px;
                 left: 40px;
@@ -79,7 +85,7 @@
             }
             h3 {
                 font-size: 50px;
-                right: 10%;
+                // right: 10%;
             }
         }
 

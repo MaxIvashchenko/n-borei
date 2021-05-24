@@ -41,7 +41,7 @@ function Home() {
 
                                     <img className="cover" src={imgSrc} alt={name + '_title'} />
                                     <h3>{t(`categories.${name}`)}</h3>
-                                    {/* <img src={stick} alt='srick' className="stick1"/> */}
+                                    <img src={stick} alt='srick' className="stick1"/>
                                     <img src={stick} alt='stick' className="stick2"/>
                                 </div>
                             </Link>

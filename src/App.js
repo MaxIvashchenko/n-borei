@@ -1,8 +1,6 @@
 import React, { Suspense } from 'react';
 import './App.scss';
 import { items } from './data'
-
-
 import { Header, Footer } from './components';
 import Layout from './components/Layout';
 
